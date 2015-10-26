@@ -2,11 +2,217 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<meta name="robots" content="index, follow">
+	<meta name="robots" content="index,follow,noodp">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Benjamin Wilson Friedman"/>
+    <meta name="author" content="Benjamin Wilson Friedman">
+	<meta name="description" content="A compact, cross platform, embeddable scripting language with an emphasis on enhancing multi-language communication and interpolation">
+	<meta name="keywords" content="script,language,embeddable,lightweight,program,interpolation,scripting,cross,platform,multi,communication">
+	<meta name="author" content="Benjamin Wilson Friedman">
+	<meta property="og:title" content="Latria | Multi-Purpose Language">
+	<meta property="og:type" content="website">
+	<meta property="og:image" content="images/logo.png">
+	<meta property="og:url" content="http://latria.uphouseworks.com">
+	<meta property="og:site_name" content="Latria Script">
+	<meta property="og:description" content="A compact, cross platform, embeddable scripting language with an emphasis on enhancing multi-language communication and interpolation">
+	<link rel="canonical" href="http://latria.uphouseworks.com"/>
+	<link itemprop="url" href="http://latria.uphouseworks.com"/>
+	<link rel="home" href="http://latria.uphouseworks.com"/>
+	<link href="css/uphw.css" rel="stylesheet"/>
+	<link href="css/font-awesome.min.css" rel="stylesheet"/>
+	<link href='http://fonts.googleapis.com/css?family=Josefin+Sans:600,300,100' rel='stylesheet' type='text/css'/>
+	
+	<!--<link rel="dns-prefetch" href="//anotherhost.com"/>-->
+
+	<title itemprop="name">Latria | Multi-Purpose Language</title>
+	
+	<!--
+		ALL OF THE BELOW NEEDS TO BE COMPLETED
+	-->
+	<!--YOUR APPLE TOUCH ICONS (still need these) -->
+	<!--
+	<link rel="apple-touch-icon" href="images/apple1.png"/>
+	<link rel="apple-touch-icon" sizes="76x76" href="images/apple2.png"/>
+	<link rel="apple-touch-icon" sizes="120x120" href="images/apple3.png"/>
+	<link rel="apple-touch-icon" sizes="152x152" href="images/apple4.png"/>
+	-->
+	<!--ADD YOUR GPLUS PAGE-->
+	<!--<link rel="author" href="https://plus.google.com/+YOUR GPLUS PAGE/posts"/>-->
+	<!--ADD YOUR GPLUS PAGE-->
+	<!--<link rel="publisher" href="https://plus.google.com/+YOUR GPLUS PAGE"/>-->
+	<!--ADD YOUR FAVICON-->
+	<link rel="icon" type="image/ico" href="images/logo.png"/>
+	<!--ADD YOUR LD JSON DATA BELOW-->
+	<!--
+	<script type="application/ld+json">
+	{
+	  "@context": "http://schema.org",
+	  "@type": "WebSite",
+	  "name": "Latria Script",
+	  "url": "http://latria.uphouseworks.com",
+	  "logo": "http://latria.uphouseworks.com/images/logo.png",
+	  "sameAs" : [
+		"https://www.facebook.com/YOUR FACEBOOK PAGE",
+		"https://twitter.com/YOUR TWITTER PAGE",
+		"https://plus.google.com/+YOUR GPLUS PAGE/"
+	  ]
+	}
+	</script>
+    -->
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/uphw.js"></script>
 </head>
 <body>
-	<h1 style="margin:16px;text-align:center">coming soon...</h1>
+
+	<span id="tmark"></span>
+
+	<!--Right Nav-->
+	<div id="right-nav">
+		<a class="nav-item" onclick="$('#tmark').scrollView();"><strong>latria.</strong></a>
+		<a class="nav-item" onclick="$('#page2').scrollView();">about</a>
+		<a class="nav-item" onclick="$('#page3').scrollView();">reuse</a>
+		<a class="nav-item" onclick="$('#page4').scrollView();">news</a>
+	</div>
+	
+	<br/><br/><br/>
+	
+	<!--Title Page-->
+	<div id="page1" class="page">
+		<!--Side Boxes-->
+		<div class="side-by-side-wrapper">
+			<!--Left Box-->
+			<div class="left-box" style="text-align:center">
+				<img class="img300" src="images/logo.png" alt="Latria Logo"/>
+			</div>
+
+			<!--Right Box-->
+			<div id="mission-box" class="right-box">
+				<h1 style="display:inline">latria</h1><span style="font-size:40px"><strong>.</strong></span>
+				<h2>A compact, cross platform, embeddable scripting language with an emphasis on enhancing multi-language communication and interpolation</h2>
+			</div>
+		</div>
+	</div>
+	
+	<!--About-->
+	<div id="page2" class="page">
+		<!--Side Boxes-->
+		<div class="side-by-side-wrapper" style="padding-top:32px">
+			<!--Left Box-->
+			<div class="left-box" style="text-align:center">
+				<h3>about.</h3>
+				<p class="pagep title-descrip">
+				latria was born out a desire to understand language.
+				</p>
+				<p class="pagep">
+				As scripters or programmers we wrestle everyday to communicate with machines all around us. Our ability to harness a computer is directly linked to how well we can communicate with it.<br/><br/>Generally this leads to a desire for shorter, more succinct statements that convey intention with unmistakable clarity.
+				<br/><br/>
+				Latria leverages a high level programming design to maximize verbosity without increasing workload.
+				<br/><br/>
+				
+				</p>
+			</div>
+
+			<!--Right Box-->
+			<div class="right-box">
+				<p class="pagep code fade-gradient">
+//Testing file opening & reading<br/>
+x = open("tryme.txt", "r")<br/>
+item = read(x)<br/>
+<br/>
+while(item != null) {<br/>
+<span class="tab"></span>print(">"+item)<br/>
+<span class="tab"></span>item = read(x)<br/>
+}<br/>
+close(x)<br/>
+<br/>
+// Substring (can be called without 3rd arg to get sub string from first index to end)<br/>
+subme = substr("get this section inside here", four)<br/>
+print(subme)<br/>
+<br/>
+//array initialization<br/>
+x={"wolf":"mango"}<br/>
+print(x["wolf"])<br/>
+<br/>
+//Testing String Find<br/>
+gh=find("hello world", "world")<br/>
+print("Found>"+gh)<br/>
+				</p>
+			</div>
+		</div>
+	</div>
+	
+	<!--Features-->
+	<div id="page3" class="page">
+		<!--Side Boxes-->
+		<div class="side-by-side-wrapper">
+			<!--Left Box-->
+			<div class="left-box" style="text-align:center">
+				<h3>cross lang.</h3>
+				<span class="fa fa-file-code-o fa-5x" style="color:#6cf"></span><br/>
+				<span class="fa fa-arrows-v fa-5x" style="margin-top:32px;margin-bottom:32px"></span><br/>
+				<span class="fa fa-file-code-o fa-5x" style="color:#fc6"></span>
+			</div>
+
+			<!--Right Box-->
+			<div class="right-box" style="text-align:center">
+				<br/><br/>
+				<p class="pagep title-descrip">
+				Bridge the language barrier, use all your &lt;code/&gt;
+				</p>
+				<p class="pagep">
+				Traditionally, one would pick a particular language and stay with it, exclusively.<br/><br/> Over time our preferences change and we learn which languages may be best suited for certain tasks in our mind.<br/><br/>Like any developer you most likely have various scripts and programs written for various tasks, in various languages.<br/><br/>Latria can mediate quite nicely, allowing you to now only run various system level commands and collect their results in one fell swoop.<br/><br/>
+				Bring back your code! Latria can handle the output itself or pipe it into another program, bringing your various libraries new purpose in your projects, no need to rewrite your old code base for a small project.
+				<br/><br/>
+				</p>
+			</div>
+		</div>
+	</div>
+	
+	<!--News-->
+	<div id="page4" class="page">
+		<!--Side Boxes-->
+		<div class="side-by-side-wrapper">
+			<!--Left Box-->
+			<div class="left-box" style="text-align:center">
+				<h3>news.</h3>
+				<p class="pagep title-descrip">
+				It will be opensource.
+				</p>
+				<p class="pagep">
+				Latria is written in <samp>C</samp>, and I have only been able to write so much on my own.<br/><br/> While I expect the initial interest to be low, I openly encourage others to suggest improvements or to utilize specific components in their work.<br/><br/> <em>The project is currently not available</em>, as it is still being worked on, but once it is at an acceptable point I will make it available to anyone and everyone.<br/><br/> Additionally I will make src and documentation available at this site, allowing anyone to get started with latria scripting.<br/><br/>In the meantime feel free to reach out to me at <a href="mailto:friedman.benjamin@gmail.com">friedman.benjamin@gmail.com</a>
+				</p>
+			</div>
+
+			<!--Right Box-->
+			<div class="right-box" style="text-align:center;margin-top:100px">
+				<span class="fa fa-cogs fa-5x" style="border:solid 6px #000;border-radius:12px;padding:32px;padding-top:18px;padding-bottom:18px"></span><br/><span class="fa fa-keyboard-o fa-5x"></span>
+			</div>
+		</div>
+	</div>
+		
+	
+	<!--Footer-->
+	<div id="footer">
+	
+		<div class='footer-section'>
+			<p class='footer-section-title'>Contact</p>
+			<a class='footer-section-item' href="mailto:friedman.benjamin@gmail.com"><span class="fa fa-envelope fa-2x"></span></a><br/>
+			<a class='footer-section-item' href="https://github.com/montymxb"><span class="fa fa-github fa-2x"></span></a>
+		</div>
+	
+		<div class='footer-section'>
+			<p class='footer-section-title'>Home</p>
+			<a class='footer-section-item' href="http://uphouseworks.com">uphouseworks.com</a>
+		</div>
+		
+		<div class='footer-section'>
+			<p class='footer-section-title'>Work</p>
+			<a class='footer-section-item' href="http://www.axolsoft.com">axolsoft</a>
+		</div>
+
+		<div class='footer-section'>
+			<p style='font-size: 16px; color: #707070'>Copyright © 2015 Benjamin Wilson Friedman, All rights reserved.</p>
+		</div>
+	</div>
+		
 </body>
 </html>
