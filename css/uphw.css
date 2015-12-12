@@ -23,6 +23,26 @@ h3 {
 	margin: 8px
 }
 
+/* CSS class for a passing build status */
+.build-no-pass:before {
+	content: "not passing"
+}
+
+.build-no-pass {
+	font-size: 12px;
+	color: #a03;
+	
+}
+
+.build-pass:before {
+	content: "passing"
+}
+
+.build-pass {
+	font-size: 12px;
+	color: #0a3
+}
+
 .tab {
 	margin-left: 25px
 }
