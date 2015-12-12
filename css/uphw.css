@@ -1,5 +1,5 @@
 * {
-	font-family: 'Josefin Sans', sans-serif;
+	font-family: 'Josefin Sans', sans-serif
 }
 
 body {
@@ -43,7 +43,7 @@ h3 {
 }
 
 .fade-gradient {
-	position: relative;
+	position: relative
 }
 
 .fade-gradient:after {
@@ -63,6 +63,21 @@ h3 {
 	background:         linear-gradient(top, rgba(255,255,255,0) 40%, rgba(255,255,255,1) 100%);
 }
 
+.download-link {
+	background: #000;
+	border: solid 2px #000;
+	border-radius: 4px;
+	transition: 0.3s;
+	color: #fff;
+	padding: 4px;
+	margin: 4px;
+	text-decoration: none
+}
+
+.download-link:hover {
+	border-radius: 50px
+}
+
 .code {
 	border: solid 2px #000;
 	padding: 16px;
@@ -73,6 +88,10 @@ h3 {
 
 .img300 {
 	width: 300px
+}
+
+#latria-image-small {
+	display: none
 }
 
 .page {
@@ -102,7 +121,7 @@ h3 {
 	margin: 8px
 }
 .side-by-side-wrapper {
-	min-height: 650px;
+	min-height: 650px
 }
 
 /* Right Nav Bar */
@@ -126,7 +145,7 @@ h3 {
 	margin-right: 16px
 }
 .nav-item:hover {
-	color: #a0a0a0;
+	color: #a0a0a0
 }		
 
 /* Footer components */
@@ -135,7 +154,7 @@ h3 {
 	color: #f0f0f0;
 	padding: 16px;
 	font-size: 20px;
-	min-height: 175px;
+	min-height: 175px
 }
 
 /* Wrapper for a footer section */
@@ -144,14 +163,14 @@ h3 {
 	margin: 8px;
 	margin-right: 16px;
 	margin-bottom: 16px;
-	float: left;
+	float: left
 }
 
 /* Title for each section */
 .footer-section-title {
 	font-weight: 600;
 	font-size: 16px;
-	margin: 0px;
+	margin: 0px
 }
 
 /* A footer section link item */
@@ -160,15 +179,15 @@ h3 {
 	color: #707070;
 	padding-bottom: 2px;
 	text-decoration: none;
-	transition: 0.3s;
+	transition: 0.3s
 }
 
 .footer-section-item:hover {
-	color: #f0f0f0;
+	color: #f0f0f0
 }
 
 .footer-section-item:focus {
-	outline: 0;
+	outline: 0
 }
 
 @media(max-width: 959px) {
@@ -184,14 +203,22 @@ h3 {
 		margin-top: 0px
 	}
 	#mission-box {
-		text-align: center;
+		text-align: center
+	}
+	
+	#latria-image {
+		display: none
+	}
+	
+	#latria-image-small {
+		display: inline
 	}
 }
 
 @media(max-width: 700px) {
 	.footer-section {
 		float: none;
-		margin: 8px;
+		margin: 8px
 	}
 	
 	.img300 {
