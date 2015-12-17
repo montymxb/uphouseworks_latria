@@ -91,7 +91,8 @@ h3 {
 	color: #fff;
 	padding: 4px;
 	margin: 4px;
-	text-decoration: none
+	text-decoration: none;
+	display: inline-block
 }
 
 .download-link:hover {
@@ -243,5 +244,10 @@ h3 {
 	
 	.img300 {
 		width: 200px
+	}
+	
+	.download-link {
+		display: block;
+		max-width: 300px
 	}
 }
