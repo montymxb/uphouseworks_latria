@@ -1,0 +1,169 @@
+body {
+	margin: 0px
+}
+
+#window-wrapper-div {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100vw;
+	overflow: hidden
+}
+
+/*** SIDE NAV CONTENT ***/
+
+#side-nav {
+	min-width: 25vw;
+	min-height: 100vh;
+	box-shadow: 1px 1px 5px #707070;
+	padding: 8px;
+	float: left;
+	margin-right: 4px;
+	overflow-y: scroll
+}
+
+.side-nav-item-title {
+	display: block;
+	color: #ff6600;
+	transition: 0.3s;
+	border: solid 2px #fff;
+	border-style: none none solid none;
+	font-size: 24px;
+	font-weight: bold;
+	padding: 2px
+}
+
+.side-nav-item {
+	display: block;
+	color: #ff9966;
+	transition: 0.3s;
+	border: solid 2px #fff;
+	border-style: none none solid none;
+	font-size: 18px;
+	margin-left: 8px;
+	padding: 2px
+}
+
+.side-nav-item-title:hover {
+	border-color: #ff6600;
+	background: #f0f0f0
+}
+
+.side-nav-item:hover {
+	border-color: #ff9966;
+	background: #f0f0f0
+}
+
+.section {
+	min-height: 300px;
+	border-radius: 4px;
+	padding: 8px;
+	margin: 4px;
+	margin-top: 16px;
+	padding-top: 62px
+}
+
+.section h2 {
+	color: #ff6600
+}
+
+.section h3 {
+	color: #ff9966
+}
+
+.section p {
+	max-width: 65vw;
+	font-size: 18px
+}
+
+.section a {
+	text-decoration: none;
+	transition: 0.3s;
+	color: #0066cc;
+	border: solid 2px #fff;
+	border-style: none none solid none
+}
+
+.section a:hover {
+	border-color: #0066cc
+}
+
+
+#content-window {
+	max-height: 100vh;
+	box-shadow: 1px 1px 5px #707070;
+	min-width: 65vw;
+	padding: 8px;
+	float: left;
+	overflow-y: scroll;
+	
+}
+
+#left-nav {
+	position: fixed;
+	display: block;
+	height: 40px;
+	box-shadow: 1px 1px 5px #707070;
+	padding-top: 16px;
+	padding-left: 16px;
+	z-index: 1;
+	background: #fff;
+	width: 100vw
+}
+.nav-item {
+	cursor: pointer;
+	margin: 8px;
+	transition: 0.3s
+}
+.nav-item:hover {
+	color: #a0a0a0
+}
+
+/* Footer components */
+#footer {
+	background: #303030;
+	color: #f0f0f0;
+	padding: 16px;
+	font-size: 20px;
+	min-height: 175px
+}
+
+/* Wrapper for a footer section */
+.footer-section {
+	padding: 8px;
+	margin: 8px;
+	margin-right: 16px;
+	margin-bottom: 16px;
+	float: left
+}
+
+/* Title for each section */
+.footer-section-title {
+	font-weight: 600;
+	font-size: 16px;
+	margin: 0px
+}
+
+/* A footer section link item */
+.footer-section-item {
+	font-size: 16px;
+	color: #707070;
+	padding-bottom: 2px;
+	text-decoration: none;
+	transition: 0.3s
+}
+
+.footer-section-item:hover {
+	color: #f0f0f0
+}
+
+.footer-section-item:focus {
+	outline: 0
+}
+
+@media(max-width: 700px) {
+	.footer-section {
+		float: none;
+		margin: 8px
+	}
+}

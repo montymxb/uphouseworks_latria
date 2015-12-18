@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#" lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="robots" content="index,follow,noodp">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!--Standard Meta Data-->
+	<meta name="description" content="YOUR SITE DESCRIPTION">
+	<meta name="keywords" content="10-15 KEYWORDS BUT NO MORE">
+	<meta name="author" content="GENERALLY JUST PUT YOUR SITE NAME HERE">
+	
+	<!--Open Graph properties (Facebook)-->
+	<meta property="og:title" content="YOUR SITE TITLE">
+	<meta property="og:type" content="website">
+	<meta property="og:image" content="YOUR SITE ICON.png">
+	<meta property="og:url" content="YOUR SITE URL">
+	<meta property="og:site_name" content="YOUR SITE NAME">
+	<meta property="og:description" content="YOUR SITE DESCRIPTION (same as above)">
+	
+	<!--Home Page Link-->
+	<link rel="home" href="YOUR HOME PAGE URL"/>
+	<!--Alternate Link (such as an rss feed)-->
+	<link rel="alternate" type="application/rss+xml" title="RSS" href="YOUR RSS FEED URL"/>
+	<!--Human Readable Sitemap-->
+	<link rel="index" href="HUMAN READABLE SITE MAP URL"/>
+	
+	<!--YOUR CANONICAL SITE URL-->
+	<link rel="canonical" href="http://YOUR SITE URL.com"/>
+	
+	<!--DNS Prefetch (optional)-->
+	<link rel="dns-prefetch" href="//anotherhost.com"/>
+	
+	<!--YOUR APPLE TOUCH ICONS-->
+	<link rel="apple-touch-icon" href="images/apple1.png"/>
+	<link rel="apple-touch-icon" sizes="76x76" href="images/apple2.png"/>
+	<link rel="apple-touch-icon" sizes="120x120" href="images/apple3.png"/>
+	<link rel="apple-touch-icon" sizes="152x152" href="images/apple4.png"/>
+	
+	<!--YOUR PAGE TITLE-->
+	<title>YOUR PAGE TITLE</title>
+	<!--ADD YOUR GPLUS PAGE-->
+	<link rel="author" href="https://plus.google.com/+YOUR GPLUS PAGE/posts"/>
+	<!--ADD YOUR GPLUS PAGE-->
+	<link rel="publisher" href="https://plus.google.com/+YOUR GPLUS PAGE"/>
+	<!--ADD YOUR FAVICON-->
+	<link rel="icon" type="image/ico" href="favicon.ico"/>
+	<link rel="stylesheet" href="guide.css"/>
+	<link href="../css/font-awesome.min.css" rel="stylesheet"/>
+	<!--ADD YOUR LD JSON DATA BELOW-->
+	<script type="application/ld+json">
+	{
+	  "@context": "http://schema.org",
+	  "@type": "WebSite",
+	  "name": "YOUR SITE NAME",
+	  "url": "http://YOUR SITE URL.com",
+	  "logo": "http://YOUR SITE URL.com/images/YOUR SITE ICON",
+	  "sameAs" : [
+		"https://www.facebook.com/YOUR FACEBOOK PAGE",
+		"https://twitter.com/YOUR TWITTER PAGE",
+		"https://plus.google.com/+YOUR GPLUS PAGE/"
+	  ]
+	}
+	</script>
+	<script src="../js/jquery-1.11.3.min.js"></script>
+	<script src="../js/uphw.js"></script>
+</head>
+<body>
+
+<!--Left Aligned Nav-->
+<div id="left-nav">
+	<a class="nav-item" onclick="$('#1').scrollView();"><strong>latria guide.</strong></a>
+</div>
+
+<!--spacer-->
+<div style="height:64px"></div>
+
+<div id="window-wrapper-div">
+
+	<div id="side-nav">
+		<a class="side-nav-item-title" onclick="$('#gettingStarted').scrollView();">Getting Started</a>
+		<a class="side-nav-item" onclick="$('#about').scrollView();">A little history</a>
+		<a class="side-nav-item" onclick="$('#gettingLatria').scrollView();">Getting Latria</a>
+		<a class="side-nav-item" onclick="$('#buildingSource').scrollView();">Building From Source</a>
+		<a class="side-nav-item" onclick="$('#installing').scrollView();">Installing</a>
+		<hr/>
+		
+	</div>
+
+
+	<div id="content-window">
+		
+		<div class="section" id="gettingStarted">
+			<h2>Getting Started.</h2>
+			<p>
+				Welcome to latria! I'm glad you're interested in learning about this exciting new scripting language. With latria you can expect to bridge between languages in a jiffy, stand up simple servers in a few lines and more. All in a familiar C style of programming.<br/><br/>
+			    This guide will do its best to help you get up and running with latria in as little time as possible. If you follow through from the start you should have enough of an understanding in latria to build your own latria scripts. If you ever have any problems, questions or corrections concerning this guide you can contact me at <a href="mailto:ben@axolsoft.com">ben@axolsoft.com</a>.<br/><br/>
+				
+			</p>
+		</div>
+		
+		<div class="section" id="about">
+			<h3>About.</h3>
+			<p>
+				A little about latria
+			</p>
+		</div>
+		
+		<div class="section" id="gettingLatria">
+			<h3>Getting Latria.</h3>
+		</div>
+		
+	</div>
+
+</div>
+		
+		
+<!--Footer-->
+<div id="footer">
+
+	<div class='footer-section'>
+		<p class='footer-section-title'>Contact</p>
+		<a class='footer-section-item' href="mailto:friedman.benjamin@gmail.com"><span class="fa fa-envelope fa-2x"></span></a><br/>
+		<a class='footer-section-item' href="https://github.com/montymxb"><span class="fa fa-github fa-2x"></span></a>
+	</div>
+
+	<div class='footer-section'>
+		<p class='footer-section-title'>Home</p>
+		<a class='footer-section-item' href="http://uphouseworks.com">uphouseworks.com</a>
+	</div>
+	
+	<div class='footer-section'>
+		<p class='footer-section-title'>Work</p>
+		<a class='footer-section-item' href="http://www.axolsoft.com">axolsoft</a>
+	</div>
+
+	<div class='footer-section'>
+		<p style='font-size: 16px; color: #707070'>Copyright © 2015 Benjamin Wilson Friedman, All rights reserved.</p>
+	</div>
+</div>
+
+</body>
+</html>
