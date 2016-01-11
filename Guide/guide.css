@@ -1,12 +1,12 @@
 body {
-	margin: 0px
+	margin: 0px;
 }
 
 #window-wrapper-div {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	width: 100vw;
+	width: 100%;
 	overflow: hidden
 }
 
@@ -14,7 +14,7 @@ body {
 
 #side-nav {
 	min-width: 25vw;
-	min-height: 100vh;
+	max-height: 100vh;
 	box-shadow: 1px 1px 5px #707070;
 	padding: 8px;
 	float: left;
@@ -44,6 +44,11 @@ body {
 	padding: 2px
 }
 
+.not-done {
+	background: #000;
+	color: #f00;
+}
+
 .side-nav-item-title:hover {
 	border-color: #ff6600;
 	background: #f0f0f0
@@ -64,11 +69,17 @@ body {
 }
 
 .section h2 {
-	color: #ff6600
+	color: #ff6600;
+	background: #ffe;
+	padding: 8px;
+	border-radius: 4px
 }
 
 .section h3 {
-	color: #ff9966
+	color: #ff6600;
+	background: #ffe;
+	padding: 8px;
+	border-radius: 4px
 }
 
 .section p {
@@ -88,6 +99,26 @@ body {
 	border-color: #0066cc
 }
 
+.section .code {
+	background: #e0e0e0;
+	border-radius: 4px;
+	font-size: 15px;
+	padding: 2px;
+	color: #a00
+}
+
+.section .output {
+	background: #e0e0e0;
+	border-radius: 4px;
+	font-size: 15px;
+	padding: 2px;
+	color: #00a
+}
+
+
+.naranja {
+	color: #ff6600
+}
 
 #content-window {
 	max-height: 100vh;

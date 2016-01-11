@@ -63,7 +63,7 @@
 	}
 	</script>
 	<script src="../js/jquery-1.11.3.min.js"></script>
-	<script src="../js/uphw.js"></script>
+	<script src="uphw.js"></script>
 </head>
 <body>
 
@@ -81,10 +81,65 @@
 		<a class="side-nav-item-title" onclick="$('#gettingStarted').scrollView();">Getting Started</a>
 		<a class="side-nav-item" onclick="$('#about').scrollView();">A little history</a>
 		<a class="side-nav-item" onclick="$('#gettingLatria').scrollView();">Getting Latria</a>
-		<a class="side-nav-item" onclick="$('#buildingSource').scrollView();">Building From Source</a>
+		<a class="side-nav-item" onclick="$('#buildingSource').scrollView();">Building</a>
 		<a class="side-nav-item" onclick="$('#installing').scrollView();">Installing</a>
+		<a class="side-nav-item" onclick="$('#firstScript').scrollView();">A Basic Script</a>
+		<a class="side-nav-item" onclick="$('#types').scrollView();">Types</a>
+		<a class="side-nav-item" onclick="$('#basicMath').scrollView();">Basic Math</a>
 		<hr/>
-		
+		<a class="side-nav-item-title" onclick="$('#strings').scrollView();">Strings</a>
+		<a class="side-nav-item" onclick="$('#find').scrollView();">find</a>
+		<a class="side-nav-item" onclick="$('#substr').scrollView();">substring</a>
+		<a class="side-nav-item" onclick="$('#replace').scrollView();">replace</a>
+		<a class="side-nav-item" onclick="$('#match').scrollView();">match</a>
+		<hr/>
+		<a class="side-nav-item-title" onclick="$('#random').scrollView();">Random</a>
+		<a class="side-nav-item" onclick="$('#rand').scrollView();">random</a>
+		<a class="side-nav-item" onclick="$('#seed').scrollView();">seed</a>
+		<hr/>
+		<a class="side-nav-item-title" onclick="$('#input').scrollView();">Input</a>
+		<hr/>
+		<a class="side-nav-item-title" onclick="$('#fileio').scrollView();">File IO</a>
+		<a class="side-nav-item" onclick="$('#open').scrollView();">open</a>
+		<a class="side-nav-item" onclick="$('#read').scrollView();">read</a>
+		<a class="side-nav-item" onclick="$('#write').scrollView();">write</a>
+		<a class="side-nav-item" onclick="$('#close').scrollView();">close</a>
+		<a class="side-nav-item" onclick="$('#remove').scrollView();">remove</a>
+		<hr/>
+		<a class="side-nav-item-title" onclick="$('#math').scrollView();">Math Functions</a>
+		<a class="side-nav-item" onclick="$('#sqrt').scrollView();">square root</a>
+		<hr/>
+		<a class="side-nav-item-title" onclick="$('#bitwise').scrollView();">Bitwise</a>
+		<a class="side-nav-item" onclick="$('#not').scrollView();">not</a>
+		<a class="side-nav-item" onclick="$('#or').scrollView();">or</a>
+		<a class="side-nav-item not-done" onclick="$('#xor').scrollView();">xor</a>
+		<a class="side-nav-item" onclick="$('#and').scrollView();">and</a>
+		<hr/>
+		<a class="side-nav-item-title not-done" onclick="$('#matchRegex').scrollView();">Match Regex</a>
+		<a class="side-nav-item not-done" onclick="$('#capture').scrollView();">capture</a>
+		<hr/>
+		<a class="side-nav-item-title not-done" onclick="$('#xlang').scrollView();">Cross Language Exec</a>
+		<a class="side-nav-item not-done" onclick="$('#interpolation').scrollView();">variable interpolation</a>
+		<hr/>
+		<a class="side-nav-item-title not-done" onclick="$('#dynaCode').scrollView();">Dynamic Code</a>
+		<a class="side-nav-item not-done" onclick="$('#load').scrollView();">load</a>
+		<a class="side-nav-item not-done" onclick="$('#run').scrollView();">run</a>
+		<hr/>
+		<a class="side-nav-item-title not-done" onclick="$('#sockets').scrollView();">Server & Client</a>
+		<a class="side-nav-item not-done" onclick="$('#server').scrollView();">server</a>
+		<a class="side-nav-item not-done" onclick="$('#client').scrollView();">client</a>
+		<a class="side-nav-item not-done" onclick="$('#connect').scrollView();">connection</a>
+		<a class="side-nav-item not-done" onclick="$('#readDat').scrollView();">Read Data</a>
+		<a class="side-nav-item not-done" onclick="$('#writeDat').scrollView();">Write Data</a>
+		<a class="side-nav-item not-done" onclick="$('#closeConn').scrollView();">Close Connection</a>
+		<hr/>
+		<a class="side-nav-item-title not-done" onclick="$('#sysFuncs').scrollView();">Additional Functions</a>
+		<a class="side-nav-item not-done" onclick="$('#sleep').scrollView();">sleep</a>
+		<a class="side-nav-item not-done" onclick="$('#time').scrollView();">time</a>
+		<a class="side-nav-item not-done" onclick="$('#platform').scrollView();">platform</a>
+		<a class="side-nav-item not-done" onclick="$('#gc').scrollView();">garbage collection</a>
+		<a class="side-nav-item not-done" onclick="$('#purge').scrollView();">purge memory</a>
+		<br/><br/>
 	</div>
 
 
@@ -99,17 +154,337 @@
 			</p>
 		</div>
 		
+		<!--About Latria-->
 		<div class="section" id="about">
-			<h3>About.</h3>
+			<h3>About latria.</h3>
 			<p>
-				A little about latria
+				A little about what latria is, what it's intended for, and how it came about. Firstly the project was started on a whim due to issues with embedding lua on certain systems. I am a big fan of lua, but I was wondering what if I wrote something that could be, well, even smaller. Something that was almost less of a langauge and more of a basic management system. A language that you could use to collectively manage your individual scripting languages, and tasks. Think of it like a script for a dispatch system, which just also happens to be it's own standalone system as well.<br/><br/>
+				With the intention to create this 'dispatch' language I set about designing a language syntax that would match this. Just a step back to explain another thing as well. I like to say that when we program/script we aren't really making anything. Now that may seem a bit harsh, but truly we're telling the computer to utilize existing resources: memory, pixels on the screen, disk space, etc. to reorganize into our 'program'. The machine you're reading this on was already capable of doing it, it just needed to be told how. With the stress on communication it comes down to one thing, how brief can I be while still expressing proper intent? That is the general issue at hand when programming. Programs that are too concise may not be explaining how to do a task as explicitly as it should, or a bloated program may be explaining far too redundantly how to do some.<br/><br/>
+				With latria the intention was to make sure that the language was simple, so intent could always be expressed briefly. If the intent is of a complex nature and requires detailed instructions, it could be written in latria, but the desire was to avoid such complex builds in latria. The incentive to the programmer is to use the embedded bridging feature of latria, a glorified piping mechanism of source. Source code from multiple languages could be written into one file, with instructions embedded on how to interpret the embedded source. The details for this mechanism will be explained in depth later on, but to sum it up developers can write 'frankenstein' scripts in latria, allowing you to dynamically interpolate the outputs of programs into other programs.<br/><br/>
+				Well that's about enough said in vaguely technical terms. After first starting the project in December of 2014 the language was opensourced in December of 2015. After about a year's worth of work the language has undergone various reconstructions, tear downs, and changes of focus, but the core concept of language interpolation mentioned above was always kept at the heart. I think it's a fascinating concept to create a language that leverages other languages as one of it's core concepts, after all they may be different, but fundamentally the concepts expressed in all languages can be nearly universally translated. Similar to speaking in spanglish, or another compilation of languages in order to express an idea on the spot in a personally convenient manner, latria is intended to be expressed not by itself but in conjunction with one or more languages to complement itself.
 			</p>
 		</div>
 		
+		<!--Getting Latria-->
 		<div class="section" id="gettingLatria">
 			<h3>Getting Latria.</h3>
+			<p>
+			You have a few choices when it comes to using latria.<br/><br/>
+			For either a prebuilt version or the source visit <a href="latria.uphouseworks.com">latria.uphouseworks.com</a>. Links for prebuilt binaries and the source can be found at the bottom of the site.<br/><br/>
+			When possible I would recommend that you build latria from source, as the builds may not be as up to date as the current source. Currently there is build support for linux & mac using <span class="code">make mac</span> or <span class="code">make linux</span> from the terminal. For building on windows it's a bit trickier, but I'll elaborate later on.
+			</p>
 		</div>
 		
+		<!--Building From Source-->
+		<div class="section" id="buildingSource">
+			<h3>Building.</h3>
+			<p>
+			To build latria from source you'll need the code, you can grab that over from the link at <a href="latria.uphouseworks.com">latria.uphouseworks.com</a>. Once you have the source you can utilize the <span class="code">make [platform]</span> command from the terminal on mac/linux. Depending on your platform substitute the name for your given platform, for example <span class="code">make mac</span> or <span class="code">make linux</span>. Both of these commands will build a completely standalone version of latria that is capable of compiling and interpreting code. If you wish to create a smaller binary, you can build the interpreter and compiler seperately. For mac, to build the interpreter and compiler you would type the following in the console. <span class="code">make mac-interpreter</span> and <span class="code">make mac-compiler</span> (make sure to run <span class="code">make clean</span> first if you already built the standalone binary).<br/><br/>
+			To see more build targets you can run <span class="code">make help</span>, which will list all valid build targets, including the debuggable targets.<br/><br/>
+			To build latria for windows, it's a different story.<br/><br/>* Currently latria does not build for windows, but I will have a working build (and included build tools) in the future. If you are confortable with C and familiar with the windows build system you may try to build latria for windows still. The current method to build is via a batch script that I have yet to include, but will eventually. You must have Visual Studio's tools installed in order to build up on windows (talking about the native build system, I have not played around with alternative approaches yet). You can read more about <a href="https://msdn.microsoft.com/en-us/library/ms229859%28v=vs.110%29.aspx">finding the developer command prompt here</a>.<br/><br/>
+			The line to build latria from source is as follows:
+			</p>
+			
+			<p class="code">
+			cl *.c /Felatria.exe<br/>
+			</p>
+			
+			<p>
+			This simply compiles all the source, links it and creates a binary called latria.exe. With the current mac/linux builds the entire source must be compiled first, and then linked afterwards. I haven't verified this yet, but if an error occurs from something being incorrectly referenced or not existing you can use the commands:
+			</p>
+			<p class="code">
+			cl /c *.c<br/>
+			link *.obj /out:latria.exe<br/>
+			</p>
+			<p>
+			Make sure to look at the Makefile for latria and substitute *.c and *.obj for the proper files and objects required for what you are trying to build. Finally make sure to pass the proper compiler flags so that latria is properly configured. Again, latria does not technically build for windows at the moment, so this is on you. I will rectify this issue and have a working build soon however, so this is only if you're impatient and wish to give it a go yourself.
+			</p>
+		</div>
+		
+		<!-- Installing -->
+		<div class="section" id="installing">
+			<h3>Installing.</h3>
+			<p>
+			To set latria up on your system path for mac/linux you can use <span class="code">make install</span>, which will install the interpreter/compiler on your machine. When the windows build is finished I will add instructions for how to install on windows as well.<br/><br/>
+			Once you have finished installing latria you can test whether or not latria is installed by running the command <span class="code">latria -v</span> from anywhere on your system (for mac/linux). You should see the version number of latria printed out to the console if it is properly installed.<br/><br/>
+			Congratulations, you now have a working copy of latria installed locally! Now we can actually start writing some latria script.
+			</p>
+		</div>
+		
+		<!-- First Script -->
+		<div class="section" id="firstScript">
+			<h3>A Basic Script.</h3>
+			<p>
+			Keeping in line with the way things work and acknowledging the concept of languages working together, we'll write a simple script to get started.
+			</p>
+			<p class="code"><br/>
+			print("hola mundo!")<br/>
+			//a comment, prints 'hola mundo' to the console<br/><br/>
+			</p>
+			
+			<p>
+			A 'traditional' hello world program! You can write this up in a file called first.lra and run <span class="code">latria first.lra</span> to execute it. You should see a the worlds 'hola mundo!' print to the the console screen. Also notice the first.lrac file automatically generated as well, this is the compiled latria file that is actually run. For the most part you need not worry yourself with these files, however I will detail working with compiled files and bytecode for the interpreter later on.
+			</p>
+		</div>
+		
+		<!--Types-->
+		<div class="section" id="types">
+			<h3>Types.</h3>
+			<p>
+			There are 6 supported first class types in latria that you need to be aware of to get started:<br/><br/>
+			<span class="naranja">
+			Number<br/>String<br/>File<br/>Array<br/>Connection<br/>null</span><br/><br/> 
+			<span class="naranja">Strings</span> are a basic type, bounded by either single or double quotes and containing any number of characters up to a closing single or double quote.<br/><br/>
+			<span class="naranja">Numbers</span> are represented internally as a 'double' type, providing an acceptable degree of precision. A number value can be set from either a Integer or a Float value, both will be converted to double internally.<br/><br/>
+			<span class="naranja">Files</span> are a type that represents an open file handle. These types are set by opening a file and used by standard IO functions.<br/><br/>
+			<span class="naranja">Arrays</span> are a type that holds an arbitrary amount of key/value pairs inside of itself. Arrays can hold any type of value (although arrays in arrays are a bit off as of this moment).<br/><br/>
+			<span class="naranja">Connections</span> are created when a server received a connection or a client successfully connects to a server. These are used for managing an established connection, such as writing/reading.<br/><br/>
+			<span class="naranja">null</span> is a special type used to denote the absence of a value in a variable.
+			<br/><br/>
+			In latria these types are all associated with variables, which are dynamically typed. This means their type is determined based on the value being assigned to it. Latria automatically handles the variable appropriately based on the underlying type of the value that was assigned to it. The code below shows an example of assigning values of varying types to the same variable.
+			</p>
+			<p class="code">
+				<br/>
+				x = 2 //a Number<br/>
+				print(x) //prints 2<br/>
+				<br/>
+				x = "bacon" //a String<br/>
+				print(x) //prints 'bacon'<br/>
+				<br/>
+			</p>
+			<p>
+			Putting this in a .lra and running it should print out the following:
+			</p>
+			<p class="output">
+				<br/>2<br/>
+				bacon<br/><br/>
+			</p>
+			<p>
+			When working with variables it is possible to change the type of a current variable depending on what you assign it to, but latria will always checks the type provided to any binary operator or function to verify it as expected. If it isn't as expected latria will print out an error to let you know.<br/><br/>
+			</p>
+		</div>
+		
+		<!-- Basic Math -->
+		<div class="section" id="basicMath">
+			<h3>Basic Math.</h3>
+			<p>
+			Arithmetic in latria is fairly straight forward, with PEMDAS order of operations prevailing over compound expressions. An example expression of arithmetic in latria is as follows.
+			</p>
+			<p class="code"><br/>
+				x = 2 * 3 + (5 * 4 / 2) - 2<br/>
+				print(x) //14<br/><br/>
+			</p>
+			<p>
+				The standard arithmetic operators +, -, *, /, ^ and % are supported. Bitwise operators are also supported, but as system functions instead. You can find more on these functions by checking out the reference portion of this guide.
+			</p>
+		</div>
+		
+		<!--Strings-->
+		<div class="section" id="strings">
+			<h2>Strings.</h2>
+			<p>
+			Strings in latria are a useful type, allowing you create basic webservers that output data or to read/write from a file. When it comes to strings they are a special case as well, being the only other first class type that can be acted on by the + operator besides Numbers. This is referred to as string concatenation, an example of this is as follows:
+			</p>
+			<p class="code"><br/>
+			x = "latria strings" + " glued together"<br/>
+			print(x) //'latria strings glued together'<br/><br/>
+			</p>
+			<p>
+			So, great, we can stick strings together, what else can we do? Beyond this latria provides a suite of built in system functions for performing standard operations with strings. Some of these functions include find, replace, substitution and match.<br/><br/>
+			<span id="find"></span>
+			<span class="naranja">Find</span> finds a string within a string, and returns the index it was found at. It takes 2 string arguments, the first the target string to search in and the second the string to find within the first string.
+			</p>
+			<p class="code"><br/>
+			x = find("string or string", "or")<br/>
+			print(x) //7<br/><br/>
+			</p>
+			<p>
+			<span id="substr"></span>
+			This by itself, is not too useful, however if we wish to use this to get a string we can use the <span class="naranja">sub string</span> function with this index we have found.
+			</p>
+			<p class="code"><br/>
+			x = substr("string or string", 7, 9) //takes the substring between the two indexes provided in a string<br/>
+			print(x) //'or'<br/><br/>
+			</p>
+			<p>
+			Now what if we wanted to take the sub string from 7 to the end of the string? We can use the same function above with one less argument to achieve this.
+			</p>
+			</p>
+			<p class="code"><br/>
+			x = substr("string or string", 7) //takes the substring from 7 to the end of this string<br/>
+			print(x) //'or string'<br/><br/>
+			</p>
+			<p>
+			<span id="replace"></span>
+			Excellent! We've taken a substring from a string. Now what if we wanted to replace that instead though. We can use the <span class="naranja">replace</span> instead.
+			</p>
+			<p class="code"><br/>
+			x = replace("string or string", "or", "and")<br/>
+			print(x) //'string and string'<br/><br/>
+			</p>
+			<p>
+			<span id="match"></span>
+			String are pretty maleable with this, but what if we want more? It turns out there's a 4th function to <span class="naranja">match</span> a string within a string by a pattern. This 'pattern' can be as simple as another raw string, like what is provided to find. However this is no ordinary function. This is a regex function! For those of you who know regex, they are a powerful component found almost universally in all languages. The underlying regex engine and the special characters it supports will be detailed later on. A simple example for now is as follows:
+			</p>
+			<p class="code"><br/>
+			x = match("string or string", "or[^s]") //matches 'o' and 'r' followed by anything that is not 's'<br/>
+			print(x)//1 (for success, 0 for failure)<br/><br/>
+			</p>
+			<p>
+			Again, I won't go into details right here but capturing and non-capturing parentheses are supported as well, for those who care to know.
+			</p>
+		</div>
+		
+		<!-- Random -->
+		<div class="section" id="random">
+			<h2>Random.</h2>
+			<p id="rand">
+			Latria encapsulates the standard 'rand' function in C. Making it available via the function <span class="naranja">random</span>. It's takes one Number argument and returns a Number.
+			</p>
+			<p class="code"><br/>
+			x = random(1024)<br/>
+			print(x) //a random number between 0 and 1023<br/><br/>
+			</p>
+			<p id="seed">
+			The rand function is a pseudorandom number generator. Meaning it's output is predictable from a given seed. In order to prevent random from returning the same series of values on startup it is recommended that you alter it using the <span class="naranja">seed</span> function, which takes one Number arg and does not return a value.
+			</p>
+			<p class="code"><br/>
+			//x is equal to a previously obtained arbitrary Number<br/>
+			seed(x) //seeds the random number generator with this Number<br/><br/>
+			y = random(1024)<br/>
+			print(y) //a 'hopefully' unexpected random number between 0 and 1023<br/><br/>
+			</p>
+			<p>
+			With these two functions you can create a reliable prng (pseudo-random number generator) to create psuedo-arbitrary values from.
+			</p>
+		</div>
+		
+		<div class="section" id="input">
+			<h2>Input.</h2>
+			<p>
+			Reading user input is a simple but important feature of any language. In latria it is achieved via the <span class="naranja">input</span> function. When called it halts until the user finishes typing their input and hits enter. Upon completion it returns a String value.
+			</p>
+			<p class="code"><br/>
+			x = input() //waits for user to enter input<br/>
+			print("You entered: " + x)<br/><br/>
+			</p>
+			<p>
+			User input can be used to allow selections, seeding of random values and even to chat in a simple server/client setup.
+			</p>
+		</div>
+		
+		<!-- File IO -->
+		<div class="section" id="fileio">
+			<h2>File IO.</h2>
+			<p>
+			In latria the ability to read files is an important aspect. Reading and writing files is supported, but binary is not (potentially in the future when a 'char' type is added). In keeping with the overall design, reading from files is incredibly simply, reading only 1 line at a time. Writing is straightforward as well, writing only one line at a time. All the file modes that are supported in C ( w, r, r+, a+, etc.) are supported in latria.<br/><br/>
+			</p>
+			
+			<h3 id="open">Opening a file.</h3>
+			<p>
+				To open a file you can use the <span class="naranja">open</span> function, which takes two string arguments. The first is the name of the file, and the second is the mode to open it in ( r, w, a+, etc.). On success this function will return a valid pointer to a file that can used in latria.
+			</p>
+			<p class="code"><br/>
+			x = open("file.txt", "r")<br/><br/>
+			</p><br/>
+			
+			<h3 id="read">Reading from a file.</h3>
+			<p>
+			To read from a file you use the <span class="naranja">read</span> function, which takes a single File argument. It will return lines or null on the reaching the end of the file.
+			</p>
+			<p class="code"><br/>
+			x = open("file.txt", "r")<br/>
+			line = read(x)<br/>
+			print(line) //a line we read from 'file.txt'<br/><br/>
+			</p>
+			
+			<h3 id="write">Writing to a file.</h3>
+			<p>
+			To write to a file you use the <span class="naranja">write</span> function, which takes a File argument and a String argument. The string value is written out as a line in the file.
+			</p>
+			<p class="code"><br/>
+			x = open("file.txt", "w")<br/>
+			write(x,"a line!") //writes a line into this file<br/><br/>
+			</p>
+			
+			<h3 id="close">Closing a file.</h3>
+			<p>
+			Once you are done reading or writing to a file use <span class="naranja">close</span> to close the file. It takes a single argument, being the File to close.
+			</p>
+			<p class="code"><br/>
+			x = open("file.txt", "r")<br/>
+			line = read(x)<br/>
+			print(line)<br/><br/>
+			close(x) //closes this file<br/><br/>
+			</p>
+			
+			<h3 id="remove">Removing a File.</h3>
+			<p>
+			If you wish to remove a file completely you can call <span class="naranja">remove</span> to delete it. Remove takes the name of the file as a String argument.
+			</p>
+			<p class="code"><br/>
+			remove("file.txt") //deletes this file<br/><br/>
+			</p>
+		</div>
+		
+		<!-- Math -->
+		<div class="section" id="math">
+			<h2 id="sqrt">Math.</h2>
+			<p>
+				Latria provides only one math function at this time, the <span class="naranja">square root</span> function. It takes one Number argument.
+			</p>
+			<p class="code"><br/>
+			x = sqrt(64)<br/>
+			print(x) //8<br/><br/>
+			</p>
+		</div>
+		
+		<!-- Bitwise -->
+		<div class="section" id="bitwise">
+			<h2>Bitwise.</h2>
+			<p>
+				Latria provides bitwise operations in the form of function calls. The provided bitwise functions are listed below with examples:
+			</p>
+			
+			<h3 id="not">not.</h3>
+			<p>
+				The bitwise 'not' operator is expressed using the function <span class="naranja">not</span>. It is often referred to as the complement operator, performing a logical negation on the bits of the passed in value. 0's become 1's, and 1's become 0's, 'flipping' the value.
+			</p>
+			<p class="code"><br/>
+				x = not(100)<br/>
+				print(x) //-101<br/><br/>
+			</p>
+			
+			<h3 id="or">or.</h3>
+			<p>
+				The bitwise inclusive or (or) operator is expressed using the function <span class="naranja">or</span>. It takes two Number arguments. The resulting output bits are 0 for each position where bits in both arguments are 0, otherwise they are 1.
+			</p>
+			<p class="code"><br/>
+				x = or(101,500)<br/>
+				print(x) //501<br/><br/>
+			</p>
+			
+			<h3 id="xor">xor.</h3>
+			<p>
+				The bitwise exclusive or (xor) operator is expressed using the function <span class="naranja">xor</span>. It takes two Number arguments. The resulting output bits are 1 for each position where only the first bit is 1 or only the second bit is 1, otherwise they are 0.
+			</p>
+			<p class="code"><br/>
+				x = xor(101,500)<br/>
+				print(x) //401<br/><br/>
+			</p>
+			
+			<h3 id="and">and.</h3>
+			<p>
+				The bitwise and (and) operator is expressed using the function <span class="naranja">and</span>. It takes two Number arguments. The output bits are the result of the first and second bit being multiplied.
+			</p>
+			<p class="code"><br/>
+				x = and(101,500)<br/>
+				print(x) //100<br/><br/>
+			</p>
+			
+		</div>	
+		
+			
 	</div>
 
 </div>
