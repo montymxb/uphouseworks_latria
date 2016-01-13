@@ -19,29 +19,32 @@ body {
 	padding: 8px;
 	float: left;
 	margin-right: 4px;
-	overflow-y: scroll
+	overflow-y: scroll;
+	background: #fff
 }
 
 .side-nav-item-title {
 	display: block;
-	color: #ff6600;
+	color: #0066ff;
 	transition: 0.3s;
 	border: solid 2px #fff;
 	border-style: none none solid none;
 	font-size: 24px;
 	font-weight: bold;
-	padding: 2px
+	padding: 2px;
+	text-decoration: none
 }
 
 .side-nav-item {
 	display: block;
-	color: #ff9966;
+	color: #0099ff;
 	transition: 0.3s;
 	border: solid 2px #fff;
 	border-style: none none solid none;
 	font-size: 18px;
 	margin-left: 8px;
-	padding: 2px
+	padding: 2px;
+	text-decoration: none
 }
 
 .not-done {
@@ -54,12 +57,12 @@ body {
 }
 
 .side-nav-item-title:hover {
-	border-color: #ff6600;
+	border-color: #0066ff;
 	background: #f0f0f0
 }
 
 .side-nav-item:hover {
-	border-color: #ff9966;
+	border-color: #0099ff;
 	background: #f0f0f0
 }
 
@@ -73,16 +76,16 @@ body {
 }
 
 .section h2 {
-	color: #ff6600;
-	background: #ffe;
+	color: #0066ff;
+	border: solid 2px #0066ff;
 	padding: 8px;
 	border-radius: 4px
 }
 
 .section h3 {
-	color: #ff6600;
-	background: #ffe;
+	color: #0099ff;
 	padding: 8px;
+	border: solid 2px #0099ff;
 	border-radius: 4px
 }
 
@@ -108,7 +111,7 @@ body {
 	border-radius: 4px;
 	font-size: 15px;
 	padding: 2px;
-	color: #a00
+	color: #0033ff
 }
 
 .section .output {
