@@ -49,6 +49,10 @@ body {
 	color: #f00;
 }
 
+.tab {
+	margin-left: 18px
+}
+
 .side-nav-item-title:hover {
 	border-color: #ff6600;
 	background: #f0f0f0

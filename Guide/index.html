@@ -38,13 +38,13 @@
 	<link rel="apple-touch-icon" sizes="152x152" href="images/apple4.png"/>
 	
 	<!--YOUR PAGE TITLE-->
-	<title>YOUR PAGE TITLE</title>
+	<title>Latria Guide and Reference</title>
 	<!--ADD YOUR GPLUS PAGE-->
 	<link rel="author" href="https://plus.google.com/+YOUR GPLUS PAGE/posts"/>
 	<!--ADD YOUR GPLUS PAGE-->
 	<link rel="publisher" href="https://plus.google.com/+YOUR GPLUS PAGE"/>
 	<!--ADD YOUR FAVICON-->
-	<link rel="icon" type="image/ico" href="favicon.ico"/>
+	<link rel="icon" type="image/ico" href="../images/logo.png"/>
 	<link rel="stylesheet" href="guide.css"/>
 	<link href="../css/font-awesome.min.css" rel="stylesheet"/>
 	<!--ADD YOUR LD JSON DATA BELOW-->
@@ -93,6 +93,13 @@
 		<a class="side-nav-item" onclick="$('#replace').scrollView();">replace</a>
 		<a class="side-nav-item" onclick="$('#match').scrollView();">match</a>
 		<hr/>
+		<a class="side-nav-item-title" onclick="$('#controlFlows').scrollView();">Control Flows</a>
+		<a class="side-nav-item" onclick="$('#if').scrollView();">if</a>
+		<a class="side-nav-item" onclick="$('#elseif').scrollView();">elseif</a>
+		<a class="side-nav-item" onclick="$('#else').scrollView();">else</a>
+		<a class="side-nav-item" onclick="$('#for').scrollView();">for</a>
+		<a class="side-nav-item" onclick="$('#while').scrollView();">while</a>
+		<hr/>
 		<a class="side-nav-item-title" onclick="$('#random').scrollView();">Random</a>
 		<a class="side-nav-item" onclick="$('#rand').scrollView();">random</a>
 		<a class="side-nav-item" onclick="$('#seed').scrollView();">seed</a>
@@ -115,30 +122,33 @@
 		<a class="side-nav-item not-done" onclick="$('#xor').scrollView();">xor</a>
 		<a class="side-nav-item" onclick="$('#and').scrollView();">and</a>
 		<hr/>
-		<a class="side-nav-item-title not-done" onclick="$('#matchRegex').scrollView();">Match Regex</a>
-		<a class="side-nav-item not-done" onclick="$('#capture').scrollView();">capture</a>
+		<a class="side-nav-item-title" onclick="$('#match_regex').scrollView();">Match Regex</a>
+		<a class="side-nav-item" onclick="$('#capture').scrollView();">capture</a>
 		<hr/>
-		<a class="side-nav-item-title not-done" onclick="$('#xlang').scrollView();">Cross Language Exec</a>
-		<a class="side-nav-item not-done" onclick="$('#interpolation').scrollView();">variable interpolation</a>
+		<a class="side-nav-item-title" onclick="$('#xlang').scrollView();">Cross Language Exec</a>
+		<a class="side-nav-item" onclick="$('#interpolation').scrollView();">variable interpolation</a>
 		<hr/>
-		<a class="side-nav-item-title not-done" onclick="$('#dynaCode').scrollView();">Dynamic Code</a>
+		<a class="side-nav-item-title" onclick="$('#dynaCode').scrollView();">Dynamic Code</a>
 		<a class="side-nav-item not-done" onclick="$('#load').scrollView();">load</a>
-		<a class="side-nav-item not-done" onclick="$('#run').scrollView();">run</a>
+		<a class="side-nav-item" onclick="$('#run').scrollView();">run</a>
 		<hr/>
-		<a class="side-nav-item-title not-done" onclick="$('#sockets').scrollView();">Server & Client</a>
-		<a class="side-nav-item not-done" onclick="$('#server').scrollView();">server</a>
-		<a class="side-nav-item not-done" onclick="$('#client').scrollView();">client</a>
-		<a class="side-nav-item not-done" onclick="$('#connect').scrollView();">connection</a>
-		<a class="side-nav-item not-done" onclick="$('#readDat').scrollView();">Read Data</a>
-		<a class="side-nav-item not-done" onclick="$('#writeDat').scrollView();">Write Data</a>
-		<a class="side-nav-item not-done" onclick="$('#closeConn').scrollView();">Close Connection</a>
+		<a class="side-nav-item-title" onclick="$('#sockets').scrollView();">Server &amp; Client</a>
+		<a class="side-nav-item" onclick="$('#server').scrollView();">server</a>
+		<a class="side-nav-item" onclick="$('#client').scrollView();">client</a>
+		<a class="side-nav-item" onclick="$('#connect').scrollView();">connection</a>
+		<a class="side-nav-item" onclick="$('#readDat').scrollView();">Read Data</a>
+		<a class="side-nav-item" onclick="$('#writeDat').scrollView();">Write Data</a>
+		<a class="side-nav-item" onclick="$('#closeConn').scrollView();">Close Connection</a>
 		<hr/>
-		<a class="side-nav-item-title not-done" onclick="$('#sysFuncs').scrollView();">Additional Functions</a>
-		<a class="side-nav-item not-done" onclick="$('#sleep').scrollView();">sleep</a>
-		<a class="side-nav-item not-done" onclick="$('#time').scrollView();">time</a>
-		<a class="side-nav-item not-done" onclick="$('#platform').scrollView();">platform</a>
-		<a class="side-nav-item not-done" onclick="$('#gc').scrollView();">garbage collection</a>
-		<a class="side-nav-item not-done" onclick="$('#purge').scrollView();">purge memory</a>
+		<a class="side-nav-item-title" onclick="$('#gc').scrollView();">Garbage Collection</a>
+		<a class="side-nav-item" onclick="$('#gc-about').scrollView();">About</a>
+		<a class="side-nav-item" onclick="$('#gc-rate').scrollView();">Altering the collection rate</a>
+		<hr/>
+		<a class="side-nav-item-title" onclick="$('#additional').scrollView();">Additional Functions</a>
+		<a class="side-nav-item" onclick="$('#sleep').scrollView();">sleep</a>
+		<a class="side-nav-item" onclick="$('#time').scrollView();">time</a>
+		<a class="side-nav-item" onclick="$('#platform').scrollView();">platform</a>
+		<a class="side-nav-item" onclick="$('#purge').scrollView();">purge memory</a>
 		<br/><br/>
 	</div>
 
@@ -335,6 +345,187 @@
 			</p>
 		</div>
 		
+		<!-- Control Flows -->
+		
+		<div class="section" id="controlFlows">
+			<h2>Control Flows.</h2>
+			<p>
+				Control flows are an essential part of any language, allowing a developer to create detailed and complex programs and scripts. If you are familiar with C style control flows most of these should be immediately familiar to you. However I will be going over each control flow in detail, so if you feel the need you may quickly pass over this section.
+			</p>
+			
+			<h3 id="if">if.</h3>
+			
+			<p>
+				An if statement is a staple in terms of control flows. With it you can execute code conditionally. When compounded with other if statements you can create a complex program capable of a variety of tasks (such as a language like this!). So first let's look at what a basic if statement looks like.
+			</p>
+			
+			<p class="code"><br/>
+				if( 1 == 1 ) {<br/>
+					<span class="tab"></span>print("1 is equal to 1")<br/>
+				}<br/><br/>
+			</p>
+			
+			<p>
+				Now to explain a bit. To start an if statement begins with the 'if' keyword, and is followed by a pair of containing parentheses wrapped around a condition. This condition is a statement that is evaluated to a boolean result. An expression can be created by comparing two values using the following:<br/> equals <span class="code">==</span>, not-equals <span class="code">!=</span>, less-than <span class="code">&lt;</span>, greater-than, <span class="code">&gt;</span>, less-than equals <span class="code">&lt;=</span> and greater-than equals <span class="code">&gt;=</span>.<br/><br/> Expressions can created by compounding these using 'And' <span class="code">&amp;&amp;</span> and 'Or' <span class="code">||</span>. Additionally these expressions can be further compounded using containing parentheses, but we won't be going into detail about that here.<br/><br/>
+				  If the expression is evaluated to be true, the code contained within the following curly braces is evaluated. If false the code contained within the curly braces is skipped entirely. This conditional branching is an important concept to note.<br/><br/>
+				In our statement the expression <span class="code"> 1 == 1</span> evaluates to true and our print statement is executed.
+			</p>
+			
+			<h3 id="elseif">elseif.</h3>
+			
+			<p>
+				An elseif statement is almost exactly like an if statement. The exception being that an elseif must always follow a preceding if or elseif statement. In this way 2 or more statements can be chained onto each other, creating a list of conditions to try. Although an elseif can follow an if, an if following an if will be treated independently. On any condition evaluating to true, it's contents are executed, and the following statements are skipped. An couple examples are as follows.
+			</p>
+			
+			<p class="code"><br/>
+				//an elseif being executed<br/>
+				if( 1 == 2 ) {<br/>
+					<span class="tab"></span>print("incorrect.")<br/><br/>
+				} elseif( 1 == 1 ) {<br/>
+					<span class="tab"></span>print("correct!")<br/><br/>
+				}<br/><br/>
+				//an elseif being executed before another<br/>
+				if( 1 == 2 ) {<br/>
+					<span class="tab"></span>print("incorrect.")<br/><br/>
+				} elseif( 1 == 1 ) {<br/>
+					<span class="tab"></span>print("correct!")<br/><br/>
+				} elseif( 2 == 2) {<br/>
+					<span class="tab"></span>print("also correct, but never run!")<br/><br/>
+				}<br/><br/>
+			</p>
+			
+			<h3 id="else">else.</h3>
+			
+			<p>
+				An else statement is another component of an existing 'if' or 'elseif'. It is never on it's own and most always be preceded by an if or elseif statement. You can imagine an else statement something akin to a failsafe condition. If the preceding if or elseif conditions all fail, the else statement will always evaluate to true and be executed. Note that no elseifs can follow an else statement. An example of an else is as follows.
+			</p>
+			
+			<p class="code"><br/>
+				if( 1 == 2 ) {<br/>
+					<span class="tab"></span>print("this can't be right...")<br/><br/>
+				} elseif( 2 == 1 ) {<br/>
+					<span class="tab"></span>print("and neither can this")<br/><br/>
+				} else {<br/>
+					<span class="tab"></span>print("i guess else will have to do!")<br/><br/>
+				}<br/><br/>
+			</p>
+			
+			<h3 id="for">for.</h3>
+			
+			<p>
+				The for loop is a construct designed to allow a program to iterate over a section of code a certain number of times. A for loop in latria looks like the following.
+			</p>
+			
+			<p class="code"><br/>
+			//an empty for loop<br/><br/>
+			for( x = 0, x &lt; 10, x = x + 1 ) {<br/>
+				<br/>
+			}<br/><br/>
+			</p>
+			
+			<p>
+				Now what exactly did we just see? Well, for starters a for loop is always initiated with the 'for' keyword, after which an opening parenthese, followed by 3 parts and a closing parenthese, follow. It's these three elements that are the key to the functionality of a for loop. The first element, in our case <span class="code"> x = 0 </span> is what's called the initialization. The initialization declares and assigns any variables that must be used for our loop. The second element, <span class="code"> x < 10 </span>, is called the condition. The condition checks the provided condition, and exits the loop when it evaluates to false. The third and final element, <span class="code"> x = x + 1 </span>, is called the afterthought. The afterthought is a line of code that is executed once at the end of every iteration.<br/><br/>
+				When you put these three together one can see we are simply assigning x to 0, checking that x is less than 10, and incrementing x by 1 at the end of every iteration. The last bit would be to address those curly braces, which indicate the start and stop of the code we will be looping over. Anything written in here will be executed until the loop evaluates to false. Using the above example we can see this by printing out the value of x every time we loop.
+			</p>
+			
+			<p class="code"><br/>
+				//a printing for loop<br/><br/>
+			for( x = 0, x &lt; 10, x = x + 1 ) {<br/><br/>
+				<span class="tab"></span>print(x)<br/>
+				<br/>
+			}<br/><br/>
+			</p>
+			
+			<p>
+				This should print out the values 0-9, each on separate lines. So great, we can loop over whatever we like. What if we want to skip an iteration though? This is possible by using the <span class="naranja">continue</span> keyword. Similar to it's usage in C based languages, continue simply skips to the end of the current loop and executes the afterthought (mentioned earlier). Let's say we wanted to skip printing the number 5? We can do that by putting a continue in an if statement.
+			</p>
+			
+			<p class="code">
+				//a printing for loop that skips 5<br/><br/>
+			for( x = 0, x &lt; 10, x = x + 1 ) {<br/><br/>
+				<span class="tab"></span>if( x == 5 ) {<br/>
+				<span class="tab"></span><span class="tab"></span>//skip this iteration<br/>
+				<span class="tab"></span><span class="tab"></span>continue<br/>
+				<span class="tab"></span>}<br/>
+				<span class="tab"></span>print(x)<br/>
+				<br/>
+			}<br/><br/>
+			</p>
+			
+			<p>
+				This prints out the values 0-9 while skipping 5. That's great, but what if we wanted to simple exit the loop altogether at 5? We could alter the condition of the for loop, but we can also use the <span class="naranja">break</span> keyword to 'break' out of the loop. An example of this is as follows
+			</p>
+			
+			<p class="code">
+				//a printing for loop that breaks out at 5<br/><br/>
+			for( x = 0, x &lt; 10, x = x + 1 ) {<br/><br/>
+				<span class="tab"></span>if( x == 5 ) {<br/>
+				<span class="tab"></span><span class="tab"></span>//break out<br/>
+				<span class="tab"></span><span class="tab"></span>break<br/>
+				<span class="tab"></span>}<br/>
+				<span class="tab"></span>print(x)<br/>
+				<br/>
+			}<br/><br/>
+			</p>
+			
+			<p>
+				Now this prints out the values 0-4, exiting the loop when the value is 5.
+			</p>
+			
+			<h3 id="while">while.</h3>
+			
+			<p>
+				The while loop is a construct similar to a for loop, allowing a program to loop over a given section of code. A while loop is like a for loop that has no initialization sequence and no afterthought sequence (as mentioned in for), only retaining the condition. This condition is evaluated before each run, and if evaluated to true, executes another loop. When this condition evaluates to false, the loop is exited. An example of a while loop is below.
+			</p>
+			
+			<p class="code"><br/>
+				x = 0<br/><br/>
+				// a while loop counting up to 10<br/>
+				while( x &lt;= 10 ) {<br/>
+					<span class="tab"></span>//print x<br/>
+					<span class="tab"></span>print(x)<br/>
+					<br/>
+					<span class="tab"></span>//increment x by 1<br/>
+					<span class="tab"></span>x = x + 1<br/>
+				}<br/><br/>
+			</p>
+			
+			<p>
+				 Similarly to a for loop, you can also use <span class="code">continue</span> and <span class="code">break</span> to skip an iteration or to exit the loop entirely.
+			</p>
+			
+			<p class="code"><br/>
+				x = 0<br/><br/>
+				// a while loop counting up to 10, but skipping 5<br/>
+				while( x &lt;= 10 ) {<br/>
+					<span class="tab"></span>if( x == 5 ) {<br/>
+					<span class="tab"></span><span class="tab"></span>//increment one up (otherwise we will loop forever) and skip this iteration<br/>
+					<span class="tab"></span><span class="tab"></span>x = x +1<br/>
+					<span class="tab"></span><span class="tab"></span>continue<br/>
+					<span class="tab"></span>}<br/>
+					<span class="tab"></span>//print x<br/>
+					<span class="tab"></span>print(x)<br/>
+					<br/>
+					<span class="tab"></span>//increment x by 1<br/>
+					<span class="tab"></span>x = x + 1<br/>
+				}<br/><br/><br/>
+				x = 0<br/><br/>
+				// a while loop counting up to 5<br/>
+				while( x &lt;= 10 ) {<br/>
+					<span class="tab"></span>if( x == 5 ) {<br/>
+					<span class="tab"></span><span class="tab"></span>//break out<br/>
+					<span class="tab"></span><span class="tab"></span>break<br/>
+					<span class="tab"></span>}<br/>
+					<span class="tab"></span>//print x<br/>
+					<span class="tab"></span>print(x)<br/>
+					<br/>
+					<span class="tab"></span>//increment x by 1<br/>
+					<span class="tab"></span>x = x + 1<br/>
+				}<br/><br/>
+			</p>
+			
+		</div>
+		
 		<!-- Random -->
 		<div class="section" id="random">
 			<h2>Random.</h2>
@@ -484,6 +675,383 @@
 			
 		</div>	
 		
+		<!-- Match Regex -->
+		<div class="section" id="match_regex">
+			<h2>Match Regex.</h2>
+			<p>
+				A basic regular expressions engine is provided in latria for matching purposes. It supports most of the basic regular expression syntax with a few exceptions (most notably look-ahead and look-behind). This engine can be used to match against strings and to even return the portion matched within a string.
+			</p>
+			<p>
+				Regular expressions are utilized by calling the <span class="naranja">match</span> function. Which takes two parameters, a target string, and a string representation of a regular expression to use on the target string.
+				A simple example is as follows.
+			</p>
+			<p class="code"><br/>
+				x = match("a basic string", "basic") //will return 1 for a match and 0 for a non-match<br/>
+				print(x) //prints 1, indicating a match (0 is a non-match)<br/><br/>
+			</p>
+			<p>
+				A simple match, so let's try something a little more substantial.<br/>Let's try and match anything starting with 'b'.
+			</p>
+			<p class="code"><br/>
+				x = match("a less basic string", "b.*") //matching b followed by anything<br/>
+				print(x) //1<br/><br/>
+			</p>
+			<p>
+				So far so good, but we can do better with capturing parentheses.<br/>
+			</p>
+			<h3 id="capture">capture.</h3>
+			<p>
+				Capturing parentheses are supported in latria, allowing you to match and return specific sub-strings.<br/>
+			</p>
+			<p class="code"><br/>
+				x = match("a simple string", "(simple)") //searches for 'string' and returns 1 if found in the target string<br/>
+				x = capture(0) //returns the first completed capture 'simple'<br/><br/>
+				// a more complex match<br/><br/>
+				x = match("another string", "([a-z]+)\s")<br/>
+				x = capture(0) //returns the first completed capture, 'another'<br/><br/>
+			</p>
+		</div>
+		
+		
+		<!-- XLang -->
+		<div class="section" id="xlang">
+			<h2>Cross Language Execution.</h2>
+			<p>
+				It's an important point to stress that latria's strength is in how it works with other languages. Executing code in a shell environment can open up a wealth of potential resources to be used as you see fit.
+				It is these additional resources that can be utilized to 'extend' latria's functionality on a system by system basis. This comes as a doubly beneficial aspect, providing a way to retrofit latria on the go and allowing you to utilize other scripts and programs that you have on your local machine.
+				<br/><br/>
+				With all of that said, this part of latria is just a glorified 'piping' or 'bridging' mechanism. Even so it stands out in a unique syntactical style all it's own, as well as allowing multiple lines in your script to be executed in the same shell. This multi-line aspect becomes incredibly useful for literally inlining other languages (when needed), or simply to include a few configuration steps in addition to calling another program or script. Anything that would be valid in a shell environment on your local machine would be just as valid here.<br/><br/>
+				So, how does this work? Latria provides a special syntax to execute code in a shell on your local system. 
+				It is defined by an opening and closing block sequence, both of which must not be followed or preceded by anything (with the exception of assigning the block's result to a variable, that will come up in a moment)<br/><br/>
+				Here's a simple example below.
+			</p>
+			
+			<p class="code"><br/>
+				//opening sequence, after this everything is executed verbatim in a shell environment (including comments) up to a valid closing sequence<br/>
+				##<br/>
+				echo done on the shell<br/>
+				#><br/>
+				//closing sequence, after this everything is interpreted normally as latria code<br/><br/>
+			</p>
+			
+			
+			<p>
+				Now upon running this you may have realized something, nothing happens. Well, technically <span style="font-style:italic">something</span> happens. 
+				The issue is that we're just not capturing what our <span style="font-style:italic">shell</span> did. It certainly did echo the provided statement, but only to itself and not out to latria.<br/><br/>
+				We can rectify this by assigning the result of our shell to a latria variable. Modifying the example above, assignment looks a little something like this.
+			</p>
+			
+			<p class="code"><br/>
+				//assigns the result of what is executed on the shell below into the variable 'var'<br/><br/>
+				var##<br/>
+				echo done on the shell<br/>
+				#><br/><br/>
+				print(var) //prints 'done on the shell\n' (note the extra linebreak that comes from the shell output)<br/><br/>
+			</p>
+			
+			<p>
+				With this you can execute whatever you'd like in latria and be able to include results from system shell executions. Additionally these shell executions can be spread out across as many lines as you like for legibility.<br/><br/>
+				There is an important rule you must regard however. An opening sequence must <span style="font-style:italic">never</span> be followed by code, and a closing sequence must <span style="font-style:italic">never</span> be preceded by code.<br/><br/>
+				A few examples of this are as follows.
+			</p>
+			
+			<p class="code"><br/>
+				//can't do this<br/>
+				var##echo this<br/>
+				#><br/><br/>
+				
+				//or this<br/>
+				var##<br/>
+				echo this#><br/><br/>
+				
+				//or this<br/>
+				var##echo this#><br/><br/>
+			</p>
+			
+			<h3 id="interpolation">interpolation.</h3>
+			
+			<p>
+				We can get output from our shell executions, but what if we want to alter what we send programmatically?
+				To solve this variable interpolation is supported in shell executions. The syntax is a bit bulky, but it's designed to be very obvious regardless of what language you're interpolating a latria variable into, minimizing any confusion on where and when you're interpolating a value.
+			</p>
+			<p class="code"><br/>
+				<br/>
+				//assign x to 'bacon'<br/>
+				x = 'bacon'<br/>
+				<br/>
+				//interpolate x into our shell execution<br/>
+				var##<br/>
+				echo IN{x}<br/>
+				#><br/>
+				<br/>
+				print(var) //prints 'bacon\n'<br/><br/>
+			</p>
+			
+			<p>
+				It is important to note that currently only variables are supported in this form of interpolation. In the future function calls will be as well.
+			</p>
+		</div>
+		
+		<!-- Dynamic Code -->
+		<div class="section" id="dynaCode">
+			<h2>Dynamic Code.</h2>
+			<p>
+				Since Latria is a scripting language it can be interpreted dynamically, which gives us the opportunity to execute latria code from inside latria or to execute additional latria scripts. This gives incredible flexibility to latria, allowing one to modularize their code and simply load up that section when needed. This means changes are reflected quickly, and there is no need to recompile latria code repeatedly, this is handled for you on an as needed basis.
+			</p>
+			
+			<h3 id="load">load.</h3>
+			<p>
+				Load allows you to run a latria script in the context of your current script. The child script you fire up will have access to all of the current variables and functions that are available to your calling script's scope.<br/><br/>This function is provided as <span class="naranja">load</span> and only takes 1 argument, the relative path to the script to load.
+			</p>
+			
+			<p class="code"><br/>
+				//loads a latria script<br/>
+				load("myscript.lra")<br/><br/>
+			</p>
+			
+			<h3 id="run">run.</h3>
+			
+			<p>
+				Run allows you to attempt to dynamically interpret and run latria code from a string. This is provided as the function <span class="naranja">run</span> and only takes 1 argument, the string to interpret and run as latria code.
+			</p>
+			
+			<p class="code"><br/>
+				//assign a string<br/>
+				x = "print('valid latria')"<br/><br/>
+				//attempt to interpret and run this string as latria code<br/>
+				run(x) //prints 'valid latria'<br/><br/>
+			</p>
+		</div>
+		
+		
+		<div class="section" id="sockets">
+			<h2>Server &amp; Client.</h2>
+			<p>
+				In today's world nearly everything is interconnected. In response latria incorporates server and client functionality as a basic need in this day and age. With the built in support for server and client functionality setting up either can be done in as few as a couple lines of code. When a connection is established both parties can either read, write or terminate the connection.
+			</p>
+			
+			<h3 id="server">server.</h3>
+			<p>
+				Setting up a server in latria is a very straightforward process. To set up a server one need only call the <span class="naranja">startServer</span> function. This function takes only one number argument, the port number to bind to. An example of starting a server is as follows.
+			</p>
+			
+			<p class="code"><br/>
+				/*<br/>
+				listens for an incoming connection on port 5000<br/>
+				NOTE this blocks until the script is terminated or an incoming connection is made<br/>
+				*/<br/><br/>
+				
+				x = startServer(5000)<br/>
+				<br/>
+				//'x' now references an established connection (successful or failed)<br/><br/>
+			</p>
+			
+			<p>
+				Be aware that calling this function will block until a connection is made.
+			</p>
+			
+			<h3 id="client">client.</h3>
+			
+			<p>
+				A client side application in latria is just about as simple as it is to create a server-side one. The <span class="naranja">connect</span> function is called with two arguments, a string of the ip address (IPv4) to connect to and a number for the port to try. Similarly to the 'startServer' function, the 'connect' function returns what's referred to as a 'connection' object. That will be explained in just a moment, but first let's see how connecting to a server looks written out.
+			</p>
+			
+			<p class="code"><br/>
+				//attempts to connect to a server at the address on the port given<br/><br/>
+				x = connect("127.0.0.1", 5000)<br/>
+				//'x' now references an established connection (successful or failed)<br/><br/>
+			</p>
+			
+			
+			<h3 id="connection">connection.</h3>
+			
+			<p>
+				As mentioned before a connection is managed via a 'connection' object. A connection object is returned from 'startServer' or 'connect' when a connection is established. When a connection attempted by the 'connect' function fails however, it returns a -1 value, which should be checked before continuing.<br/><br/>
+				A connection is a first class citizen, capable of being passed and returned like any other value. Once a connection has been obtained it can be manipulated by 3 distinct functions: readData, writeData and closeConnection.
+			</p>
+			
+			<h3 id="readDat">Read Data.</h3>
+			
+			<p>
+				Reading data from an established connection is done through the <span class="naranja">readData</span> function, which takes 1 established connection as an argument and returns a string of the data read. It is important to note that this is a blocking call, and will remain so until data is available to be read from the connection. With this in mind take care not to immediately call 'readData' when it is possible there may not be data to read. If you do this there is a risk of a hangup with both sides simply listening forever! With that noted, here's an example of reading data from an established connection.
+			</p>
+			
+			<p class="code"><br/>
+				//connect to a server on port 5000<br/>
+				x = connect("127.0.0.1", 5000)<br/>
+				<br/>
+				//read data from our connection, returns a string<br/>
+				read = readData(x)<br/>
+				<br/>
+				//print what we read<br/>
+				print(read)<br/><br/>
+			</p>
+			
+			<h3 id="writeDat">Write Data.</h3>
+			
+			<p>
+				Writing data to an established connection is done through the <span class="naranja">writeData</span> function, which takes an established connection and a string value to write as arguments. It returns a number value of the number of bytes written to the output stream. If you write a string such as "meep meep" and 'writeData' returns a value of 0 you can be relatively sure that the other side has disconnected or is otherwise no longer available. Here's an example of writing over an established connection and checking if we sent successfully using an if-else statement.
+			</p>
+			
+			<p class="code"><br/>
+				//connect to a server on port 5000<br/>
+				x = connect("127.0.0.1", 5000)<br/>
+				<br/>
+				result = writeData(x,"meep meep")<br/>
+				<br/>
+				//check the value to make sure we wrote out successfully<br/>
+				if(result == 0) {<br/>
+					<span class="tab"></span>print("Error! Was unable to write to the stream.")<br/>
+				} else {<br/>
+					<span class="tab"></span>print("Success!")<br/>
+				}<br/><br/>
+			</p>
+			
+			<h3 id="closeConn">Close Connection.</h3>
+			
+			<p>
+				Closing an established connection is something you should make a habit of when you're all done. It's a manner of good housekeeping, to speak. Closing a connection frees up not only the associated variable but also any underlying resources the system has involved in this connection as well. To do this you call the <span class="naranja">closeConnection</span> function, passing a connection argument. Below is an example of the whole connection life cycle from the client's perspective with the connection being closed at the end.
+			</p>
+			
+			<p class="code"><br/>
+				//Shows the whole cycle of connecting to a server, writingData, readingData, and closing the connection<br/><br/>
+				//connect to a server on port 5000<br/>
+				x = connect("127.0.0.1", 5000)<br/>
+				<br/>
+				result = writeData(x,"meep meep")<br/>
+				<br/>
+				//check the value to make sure we wrote out successfully<br/>
+				if(result == 0) {<br/>
+					<span class="tab"></span>print("Error! Was unable to write to the stream.")<br/>
+				} else {<br/>
+					<span class="tab"></span>print("Wrote successfully!")<br/>
+				}<br/><br/>
+				//reads data from the connection source<br/>
+				read = readData(x)<br/>
+				<br/>
+				//prints what we read<br/>
+				print(read)<br/><br/>
+				//Closes our connection<br/>
+				closeConnection(x)<br/><br/>
+			</p>
+		</div>
+		
+		<!-- Garbage Collection -->
+		<div class="section" id="gc">
+			<h2>Garbage Collection.</h2>
+			
+			<p>
+				Latria is a garbage collected language. The user need not worry about managing memory manually. On the other hand it is important that this 'garbage collection' is given attention, as it can lead to undesirable circumstances should the user not be careful. The summary below is a bit technical but I recommend you going over it.
+			</p>
+			
+			<h3 id="gc-about">About.</h3>
+			
+			<p>
+				To start I'll relate the inner workings in an abstract way. Normally a GC could be described by such things as conservative, precise, mark-and-sweep, incremental, etc. The GC in Latria does not fit into any one of these categories completely, and in a technical sense it isn't even really a GC at all. The way this collection system works is something that can be generally described as follows.<br/><br/>
+				Imagine a recycling plant that takes whatever you give them. When possible they recycle and return whatever is given to them. It's easy to imagine that over time they would inevitably end up with a large quantity of unusable junk which they would have to eventually dispose of. They would like to dispose of this junk as infrequently as possible, as it takes a large amount of time to do, so they wait until they can't handle anything else. Once they're reached capacity, they dispose of everything they're holding, creating room for more junk/recyclables.<br/><br/>
+				Ultimately Latria's 'garbage collector' is more accurately a dynamically formed memory pool. This pool is very similar to the aforementioned recycling plant. Every time you set a variable to <span class="code">null</span> or a variable falls out of scope, it is trashed. These trashed variables end up in our pool. In addition to the variables you see, <span style="font-style:italic">all</span> latria's allocation logic is managed by way of this pool. When any allocations are made (internally or by the user) latria makes a request to the pool for a block. The pool then rummages around through it's 'junk' and looks for a chunk of memory that is of the appropriate size. Upon finding a block that is at least large enough, the pool returns that block (a pointer to it to be exact). If the pool does not find a valid block it defers to requesting a block via a managed call to malloc.<br/><br/>
+				Great, so now we have a chunk of memory to do with as we please. What happens when we no longer want this memory? We return it to the system! Now in C this is usually achieved via the 'free' function, which does as it says. However, in C, there is not only an overhead to allocation, but also to freeing. In addition, memory is memory. It's universal despite what it may be containing. With this in mind, Latria attempts to recycle memory rather than free it. Not only can we avoid a future malloc but we can potentially keep our memory footprint indefinitely small<br/><br/> 
+				With this scheme a few issues rise though. One being we can only hold so much memory to recycle before we need to start giving back, and two we don't have a way of telling whether two variables reference the same underlying object. Within latria itself, this is not a problem. The calls to allocate and free memory are synonymous with malloc and free in how they are utilized. The problem of multiple references to a single object becomes an issue when the user assigns a File value to an additional variable. When done both variables will reference the same File, and if one is closed the other will become an invalid pointer. It is at this point that this designs becomes, faulty. When working with such objects it is best to avoid multiple references when possible, and when not possible they should be treated with caution.<br/><br/>
+				To more technically describe this memory is freed to and allocated from the pool's contents whenever possible. When not possible the pool is bypassed and memory is asked for using a managed call to malloc. When this memory is freed later on it is added to the pool as an additional resource. When latria is shutdown or a scope is exited any allocated memory from the enclosing scope or the latria vm is sent to this pool. When the pool exceeds a certain size latria momentarily defers itself to managing the flushing of the pool. Generally this goes unnoticed, but should the user allow an enormous max program size (more on that later), a flush could very well freeze the program for a few seconds or more. However the default maximum pool size should be more than sufficient to allow for smooth operation.<br/><br/>
+				
+			</p>
+			
+			<h3 id="gc-rate">Altering the collection rate.</h3>
+			
+			<p>
+				So, having established that this GC is more along the lines of a recycler, how do we indicate how much we're willing to hold? Their is a function <span class="code">__setGCRate</span> which takes a single number value, the value by which to multiply the pool's size. The baseline pool size is 1024 bytes. Passing 2.0 would double the pool size, while 0.5 would halve it. By running your program with a pool size of 0 you can run latria at just over 500kb. Using the aforementioned function you could modify the 'collection' rate as follows.
+			</p>
+			
+			<p class="code"><br/>
+				//sets the pool size to 0, freeing all memory immediately after being added to the pool<br/>
+				__setGCRate(0.0)<br/><br/>
+				//note this has a performance hit, but if memory is an issue latria can run at just over 500kb using this<br/><br/>
+			</p>
+			
+		</div>
+		
+		<!-- Additional Functions -->
+		<div class="section" id="additional">
+			<h2>Additional Functions.</h2>
+			
+			<p>
+				The following are additional latria functions that didn't quite make it into a category of their own. While they are important, they can be summed up here.
+			</p>
+			
+			<h3 id="sleep">sleep.</h3>
+			
+			<p>
+				The <span class='naranja'>sleep</span> function is called with a single number argument, indicating the number of seconds to sleep.
+			</p>
+			
+			<p class="code"><br/>
+				//sleeps for 2 seconds<br/>
+				sleep(2)<br/><br/>
+			</p>
+			
+			<h3 id="time">time.</h3>
+			
+			<p>
+				Returns the current time as a number since 00:00 hours, Jan 1, 1970 UTC. You can get this time by calling <span class="naranja">time</span> with no arguments.
+			</p>
+			
+			<p class="code"><br/>
+				//gets the current time since 00:00 hours, Jan 1, 1970 UTC<br/>
+				x = time()<br/>
+				<br/>
+			</p>
+			
+			<h3 id="platform">platform.</h3>
+			
+			<p>
+				Returns the name of the platform as a string that this instance of latria was compiled for. Called via the function <span class="naranja">platformName</span> with no arguments. The possible values it can return are mac, linux, windows, or undefined.
+			</p>
+			
+			<p class="code"><br/>
+				//returns the platform name<br/>
+				x = platformName()<br/><br/>
+				//prints the platform name<br/>
+				print(x)<br/><br/>
+			</p>
+			
+			<h3 id="purge">purge memory.</h3>
+			
+			<p>
+				Purges all allocated variables, functions, etc. You can call this via the function <span class="naranja">__purge</span> with no arguments and no return value.
+			</p>
+			
+			<p class="code"><br/>
+				//set x to something<br/>
+				x = "something"<br/>
+				//prints 'something'<br/>
+				print(x)<br/>
+				<br/>
+				__purge()<br/>
+				<br/>
+				//prints 'null'<br/>
+				print(x)<br/><br/>
+			</p>
+			
+		</div>
+		
+		<!--TEMPLATE-->
+		<!--
+		<div class="section" id="bitwise">
+			<h2>Bitwise.</h2>
+			<p>
+				Latria provides bitwise operations in the form of function calls. The provided bitwise functions are listed below with examples:
+			</p>
+			
+			<h3 id="not">not.</h3>
+			<p>
+				The bitwise 'not' operator is expressed using the function <span class="naranja">not</span>. It is often referred to as the complement operator, performing a logical negation on the bits of the passed in value. 0's become 1's, and 1's become 0's, 'flipping' the value.
+			</p>
+			<p class="code"><br/>
+				x = not(100)<br/>
+				print(x) //-101<br/><br/>
+			</p>
+		</div>
+		-->
 			
 	</div>
 
