@@ -130,11 +130,8 @@ body {
 #content-window {
 	max-height: 100vh;
 	box-shadow: 1px 1px 5px #707070;
-	min-width: 65vw;
 	padding: 8px;
-	float: left;
-	overflow-y: scroll;
-	
+	overflow-y: scroll
 }
 
 #left-nav {
@@ -216,9 +213,17 @@ body {
 	outline: 0
 }
 
-@media(max-width: 700px) {
+/* Restructures the footer */
+@media(max-width: 900px) {
 	.footer-section {
 		float: none;
 		margin: 8px
+	}
+}
+
+/* Removes the nav bar entirely for the guide alone */
+@media(max-width: 570px) {
+	#side-nav {
+		display: none
 	}
 }
