@@ -163,7 +163,8 @@ h3 {
 	cursor: pointer;
 	margin: 8px;
 	transition: 0.3s;
-	margin-right: 16px
+	margin-right: 16px;
+	color: #000
 }
 .nav-item:hover {
 	color: #a0a0a0
