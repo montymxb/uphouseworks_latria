@@ -176,23 +176,24 @@
 			<p>
 			To build latria from source you'll need the code, you can grab that over from the link at <a href="http://latria.uphouseworks.com">latria.uphouseworks.com</a>. Once you have the source you can utilize the <span class="code">make [platform]</span> command from the terminal on mac/linux. Depending on your platform substitute the name for your given platform, for example <span class="code">make mac</span> or <span class="code">make linux</span>. Both of these commands will build a completely standalone version of latria that is capable of compiling and interpreting code. If you wish to create a smaller binary, you can build the interpreter and compiler seperately. For mac, to build the interpreter and compiler you would type the following in the console. <span class="code">make mac-interpreter</span> and <span class="code">make mac-compiler</span> (make sure to run <span class="code">make clean</span> first if you already built the standalone binary).<br/><br/>
 			To see more build targets you can run <span class="code">make help</span>, which will list all valid build targets, including the debuggable targets.<br/><br/>
-			To build latria for windows, it's a different story.<br/><br/>* Currently latria does not build for windows, but I will have a working build (and included build tools) in the future. If you are confortable with C and familiar with the windows build system you may try to build latria for windows still. The current method to build is via a batch script that I have yet to include, but will eventually. You must have Visual Studio's tools installed in order to build up on windows (talking about the native build system, I have not played around with alternative approaches yet). You can read more about <a href="https://msdn.microsoft.com/en-us/library/ms229859%28v=vs.110%29.aspx">finding the developer command prompt here</a>.<br/><br/>
-			The line to build latria from source is as follows:
+			<!--Building for Windows-->
+			To build latria for windows, you'll need to have Visual Studio installed with <a href="https://msdn.microsoft.com/en-us/library/ms229859%28v=vs.110%29.aspx">access to the developer command prompt</a>, which provides the required environment to build under. Nmake is utilized to build on windows, and makes use of an additional nmake compatible Makefile (appropriately called NMakeFile).<br/><br/>
+			To build latria on windows you invoke nmake on the NMakeFile as follows:
 			</p>
 			
-			<p class="code">
-			cl *.c /Felatria.exe<br/>
+			<p class="code"><br/>
+			::Be sure to invoke with /F NMakeFile, otherwise nmake will unsuccessfully attempt to use the regular Makefile<br/><br/>
+			nmake /F NMakeFile latria<br/><br/>
 			</p>
 			
 			<p>
-			This simply compiles all the source, links it and creates a binary called latria.exe. With the current mac/linux builds the entire source must be compiled first, and then linked afterwards. I haven't verified this yet, but if an error occurs from something being incorrectly referenced or not existing you can use the commands:
+			This creates a standard latria binary, capable of running latria scripts standalone. It also creates latriad.exe, used for debugging compiled latria scripts. Some other build options are as follows.
 			</p>
-			<p class="code">
-			cl /c *.c<br/>
-			link *.obj /out:latria.exe<br/>
-			</p>
-			<p>
-			Make sure to look at the Makefile for latria and substitute *.c and *.obj for the proper files and objects required for what you are trying to build. Finally make sure to pass the proper compiler flags so that latria is properly configured. Again, latria does not technically build for windows at the moment, so this is on you. I will rectify this issue and have a working build soon however, so this is only if you're impatient and wish to give it a go yourself.
+			<p class="code"><br/>
+			:: makes the interpreter only<br/>
+			nmake /F NMakeFile interpreter<br/><br/>
+			:: makes the compiler only<br/>
+			nmake /F NMakeFile compiler<br/><br/>
 			</p>
 		</div>
 		
@@ -200,7 +201,7 @@
 		<div class="section" id="installing">
 			<h3>Installing.</h3>
 			<p>
-			To set latria up on your system path for mac/linux you can use <span class="code">make install</span>, which will install the interpreter/compiler on your machine. When the windows build is finished I will add instructions for how to install on windows as well.<br/><br/>
+			To set latria up on your system path for mac/linux you can use <span class="code">make install</span>, which will install the interpreter/compiler on your machine.<br/><br/> For windows there is no supported system installation, simply place it where you want to use it and continue from there.<br/><br/>
 			Once you have finished installing latria you can test whether or not latria is installed by running the command <span class="code">latria -v</span> from anywhere on your system (for mac/linux). You should see the version number of latria printed out to the console if it is properly installed.<br/><br/>
 			Congratulations, you now have a working copy of latria installed locally! Now we can actually start writing some latria script.
 			</p>
@@ -1063,7 +1064,7 @@
 	</div>
 
 	<div class='footer-section'>
-		<p style='font-size: 16px; color: #707070'>Guide Revision 1 for Latria v0.1.0</p>
+		<p style='font-size: 16px; color: #707070'>Guide Revision 2 for Latria v0.1.0</p>
 		<p style='font-size: 16px; color: #707070'>Copyright © 2015 Benjamin Wilson Friedman, All rights reserved.</p>
 	</div>
 </div>
