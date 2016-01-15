@@ -177,13 +177,13 @@
 			To build latria from source you'll need the code, you can grab that over from the link at <a href="http://latria.uphouseworks.com">latria.uphouseworks.com</a>. Once you have the source you can utilize the <span class="code">make [platform]</span> command from the terminal on mac/linux. Depending on your platform substitute the name for your given platform, for example <span class="code">make mac</span> or <span class="code">make linux</span>. Both of these commands will build a completely standalone version of latria that is capable of compiling and interpreting code. If you wish to create a smaller binary, you can build the interpreter and compiler seperately. For mac, to build the interpreter and compiler you would type the following in the console. <span class="code">make mac-interpreter</span> and <span class="code">make mac-compiler</span> (make sure to run <span class="code">make clean</span> first if you already built the standalone binary).<br/><br/>
 			To see more build targets you can run <span class="code">make help</span>, which will list all valid build targets, including the debuggable targets.<br/><br/>
 			<!--Building for Windows-->
-			To build latria for windows, you'll need to have Visual Studio installed with <a href="https://msdn.microsoft.com/en-us/library/ms229859%28v=vs.110%29.aspx">access to the developer command prompt</a>, which provides the required environment to build under. Nmake is utilized to build on windows, and makes use of an additional nmake compatible Makefile (appropriately called NMakeFile).<br/><br/>
-			To build latria on windows you invoke nmake on the NMakeFile as follows:
+			To build latria for windows, you'll need to have Visual Studio installed with <a href="https://msdn.microsoft.com/en-us/library/ms229859%28v=vs.110%29.aspx">access to the developer command prompt</a>, which provides the required environment to build under. Nmake is utilized to build on windows, and makes use of an additional nmake compatible Makefile (appropriately called NMakefile).<br/><br/>
+			To build latria on windows you invoke nmake on the NMakefile as follows:
 			</p>
 			
 			<p class="code"><br/>
-			::Be sure to invoke with /F NMakeFile, otherwise nmake will unsuccessfully attempt to use the regular Makefile<br/><br/>
-			nmake /F NMakeFile latria<br/><br/>
+			::Be sure to invoke with /F NMakefile, otherwise nmake will unsuccessfully attempt to use the regular Makefile<br/><br/>
+			nmake /F NMakefile latria<br/><br/>
 			</p>
 			
 			<p>
@@ -191,9 +191,9 @@
 			</p>
 			<p class="code"><br/>
 			:: makes the interpreter only<br/>
-			nmake /F NMakeFile interpreter<br/><br/>
+			nmake /F NMakefile interpreter<br/><br/>
 			:: makes the compiler only<br/>
-			nmake /F NMakeFile compiler<br/><br/>
+			nmake /F NMakefile compiler<br/><br/>
 			</p>
 		</div>
 		
