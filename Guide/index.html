@@ -69,6 +69,7 @@
 		<a class="side-nav-item" href="#buildingSource">Building</a>
 		<a class="side-nav-item" href="#installing">Installing</a>
 		<a class="side-nav-item" href="#firstScript">A Basic Script</a>
+		<a class="side-nav-item" href="#syntax">Basic Syntax</a>
 		<a class="side-nav-item" href="#types">Types</a>
 		<a class="side-nav-item" href="#basicMath">Basic Math</a>
 		<hr/>
@@ -78,12 +79,21 @@
 		<a class="side-nav-item" href="#replace">replace</a>
 		<a class="side-nav-item" href="#match">match</a>
 		<hr/>
+		<a class="side-nav-item-title" href="#arrays">Arrays</a>
+		<a class="side-nav-item" href="#initializing">initializing an array</a>
+		<a class="side-nav-item" href="#accessing">accessing elements</a>
+		<hr/>
 		<a class="side-nav-item-title" href="#controlFlows">Control Flows</a>
 		<a class="side-nav-item" href="#if">if</a>
 		<a class="side-nav-item" href="#elseif">elseif</a>
 		<a class="side-nav-item" href="#else">else</a>
 		<a class="side-nav-item" href="#for">for</a>
 		<a class="side-nav-item" href="#while">while</a>
+		<hr/>
+		<a class="side-nav-item-title" href="#functions">Functions</a>
+		<a class="side-nav-item" href="#calling">calling</a>
+		<a class="side-nav-item" href="#declaring">declaring</a>
+		<a class="side-nav-item" href="#returning">returning</a>
 		<hr/>
 		<a class="side-nav-item-title" href="#random">Random</a>
 		<a class="side-nav-item" href="#rand">random</a>
@@ -219,15 +229,115 @@
 			</p>
 			
 			<p>
-			A 'traditional' hello world program! You can write this up in a file called first.lra and run <span class="code">latria first.lra</span> to execute it. You should see a the worlds 'hola mundo!' print to the the console screen. Also notice the first.lrac file automatically generated as well, this is the compiled latria file that is actually run. For the most part you need not worry yourself with these files, however I will detail working with compiled files and bytecode for the interpreter later on.
+			A 'traditional' hello world program! You can write this up in a file called first.lra and run <span class="code">latria first.lra</span> to execute it. By convention all latria script files end in 'lra', and in an organizational sense it would be best to follow this convention. Now from this script you should see 'hola mundo!' print to the the console screen. If you see this print out then you've successfully run your first script! From here it's a matter of getting the basic syntax down and learning what Latria has to offer in terms of functionality.<br/><br/>
+			If you were looking in the directory after running your script you may have noticed the first.lrac file automatically generated, this is the <span style="font-style:italic">compiled</span> latria file that is actually run. I won't delve into details, but latria executes what is referred to as bytecode, something that is generated from the code written in your scripts and stored in the .lrac files. For the most part you need not worry yourself with these files, just know that they are the product of your scripts for latria to execute.
 			</p>
+		</div>
+		
+		<!--Basic Syntax-->
+		<div class="section" id="syntax">
+			<h3>Basic Syntax.</h3>
+			<p>
+				As a language latria has a fairly non-original syntactical structure. This entire guide goes over each component of the latria language you will encounter and explains how to work with, so here we'll just go over the basics.<br/><br/>
+				First off, variables. Variables are textual representations of data. They can be assigned to, passed, and deleted. To 'set' a variable you pass a name, an = and a value to assign.
+			</p>
+			
+			<p class="code"><br/>
+				x = 5<br/><br/>
+			</p>
+			
+			<p>
+				Now the variable x holds the value 5. You can now use x as it were 5. Here's another example, but with a string. If you're not familiar with the concept you can think of a string as a series of characters 'strung' together. Here we'll assign x to a string, and print it out to the screen.
+			</p>
+			
+			<p class="code"><br/>
+				x = "a string of text contained within double quotes"<br/><br/>
+				print(x)<br/><br/>
+			</p>
+			
+			<p>
+				If done right this should print 'a string of text contained within double quotes'. Note that you can use double or single quotes to contain a string. If you have to include a ' or " inside a string use one or the other to avoid ending the string early. If you have to use both or prefer using one in particular, you can escape ' or " from being seen as a boundary of a string by writing a backslash character \ before.
+			</p>
+			
+			<p class="code"><br/>
+				x = 'tom\'s diner'<br/><br/>
+				print(x)<br/><br/>
+			</p>
+			
+			<p>
+				Code not being spoken or written language we're used to can make it difficult to convey what is intended by that same code. When you wish to add a little info about what it is you're writing in your native tongue, use a comment. A comment can be written 2 ways in latria. Two slashes // or /*  followed by */ (a block comment). When using // everything that follows is a comment until the end of that line. When using /* anything following is a comment until */ is read, even if it means going across multiple lines. Anything in a comment is completely ignored by latria and is strictly for marking up your scripts for you and other users to read. When using comments, use them early, use them often. It's too easy to comment a piece of code and save yourself the dilemma of attempting to reinterpret what it was you originally wrote, in latria or <span style='font-style:italic'>any</span> language for that matter.
+			</p>
+			
+			<p class="code"><br/>
+				// this entire line is a comment<br/>
+				<br/>
+				// x = 2 does nothing since this is a comment<br/>
+				<br/>
+				/* a block comment on one line */<br/>
+				<br/>
+				/* <br/>
+				a block comment<br/>
+				across many<br/>
+				lines<br/>
+				*/<br/><br/>
+			</p>
+			
+			<p>
+				As seen earlier with the 'print' statement, function calls are a major part of latria. Without the print function you would have a difficult time trying to see what latria is doing!<br/><br/>In Latria there are user provided functions and system functions, here I'll be explaining the later (user defined functions are explained later on). Let's look at the print function again. This time let's assign a string to a variable and print the variable instead.
+			</p>
+			
+			<p class="code"><br/>
+				// assign a string to x<br/>
+				x = "printed out!"<br/><br/>
+				// call print with x as the argument<br/>
+				print(x)<br/><br/>
+				// prints 'printed out!'<br/>
+				<br/>
+			</p>
+			
+			<p>
+				Function calls are capable of taking expressions instead of raw values or variables as well. See for yourself.
+			</p>
+			
+			<p class="code"><br/>
+				// assign 5 to x<br/>
+				x = 5<br/><br/>
+				// call print with the expression 'x * 4' as the argument<br/>
+				print(x * 4)<br/><br/>
+				// prints 20<br/>
+				<br/>
+			</p>
+			
+			<p>
+				As you can see the expression of x * 4, or 5 times 4 is evaluated and passed as it's result to the print function. This kind of functionality can allow you to make many operations on line instead of having to write them out line by line, saving you space and time where complexity is not a concern.
+			</p>
+			
+			<p>
+				If you wish to clear a variable, you can 'null' it by setting it equal to a special type called <span class="naranja">null</span>. Setting any variable to null unsets that variable, removing the value and variable simultaneously.
+			</p>
+			
+			<p class="code"><br/>
+				// set x to 2<br/>
+				x = 2<br/>
+				print(x) //2<br/><br/>
+				//set x to null<br/>
+				x = null<br/>
+				print(x) // null (as in not set)<br/><br/>
+				// set x to 'baby back ribs!'<br/>
+				x = 'baby back ribs!'<br/>
+				print(x) // baby back ribs!<br/><br/>
+				//set x to null again<br/>
+				x = null<br/>
+				print(x) // null (as in not set)<br/><br/>
+			</p>
+			
 		</div>
 		
 		<!--Types-->
 		<div class="section" id="types">
 			<h3>Types.</h3>
 			<p>
-			There are 6 supported first class types in latria that you need to be aware of to get started:<br/><br/>
+			There are 6 data types in latria that you need to be aware of to get started:<br/><br/>
 			<span class="naranja">
 			Number<br/>String<br/>File<br/>Array<br/>Connection<br/>null</span><br/><br/> 
 			<span class="naranja">Strings</span> are a basic type, bounded by either single or double quotes and containing any number of characters up to a closing single or double quote.<br/><br/>
@@ -264,14 +374,14 @@
 		<div class="section" id="basicMath">
 			<h3>Basic Math.</h3>
 			<p>
-			Arithmetic in latria is fairly straight forward, with PEMDAS order of operations prevailing over compound expressions. An example expression of arithmetic in latria is as follows.
+			Arithmetic in latria is straight forward, with PEMDAS order of operations prevailing over compound expressions. An example expression of arithmetic in latria is as follows. Note that the parentheses are respected as aforementioned via PEMDAS.
 			</p>
 			<p class="code"><br/>
 				x = 2 * 3 + (5 * 4 / 2) - 2<br/>
 				print(x) //14<br/><br/>
 			</p>
 			<p>
-				The standard arithmetic operators +, -, *, /, ^ and % are supported. Bitwise operators are also supported, but as system functions instead. You can find more on these functions by checking out the reference portion of this guide.
+				The standard arithmetic operators +, -, *, /, ^ and % are supported. Bitwise operators are also supported, but as system functions instead.<br/><br/>All of the aforementioned operators or binary, meaning they work on two elements. Many other languages feature these and <span style='font-style:italic'>unary</span> operators. These work on a single element, such as the ++ increment and -- decrement operators. No unary operators are present in latria.
 			</p>
 		</div>
 		
@@ -331,8 +441,56 @@
 			</p>
 		</div>
 		
-		<!-- Control Flows -->
 		
+		<!--Arrays-->
+		<div class='section' id='arrays'>
+			<h2>Arrays.</h2>
+			<p id="initializing">
+				Arrays in latria are a special data type that holds a collection of keys and associated values, keys being strings and values being other variables. Utilizing arrays it is possible create complex data structures that can keep track of such things as time sheets, scoreboards, recipe lists and even documentation.
+			</p>
+			
+			<h3>initializing an array.</h3>
+			<p>
+				First I'll show an example of the syntax for initializing an array, then I'll explain it afterwards.
+			</p>
+			
+			<p class="code"><br/>
+				//creates an array with one key/value<br/>
+				x = {"animal":"cow"}<br/>
+				<br/>
+				//creates an array with 2 elements<br/>
+				x = {"age":66 , "height":6}<br/><br/>
+			</p>
+			
+			<p id="accessing">
+				Creating an array starts with a regular variable assignment, until after the = sign. At this point our array definition begins. An array initializer is always marked with a pair of curly braces {} following an equals sign. Within these curly braces can be 1 or more key/value pairs to initialize the array with. For each key/value pair the key is a string, followed by a colon :, followed by a value or variable to assign to that key. If another key/value pair is desired a comma is used to separate the individual pairs.
+			</p>
+			
+			<h3>accessing an element.</h3>
+			<p>
+				Accessing an array element allows you to either reference it as a variable or to set it to another value. An example of both getting and setting an array value is below.
+			</p>
+			
+			<p class="code"><br/>
+				//setting x to an array with 2 key/value pairs<br/>
+				x={"1":"cat" , "2":"dog"}<br/><br/>
+				//print the value of "1" in x<br/>
+				print(x["1"])<br/><br/>
+				//change the value of "1" in x to moose<br/>
+				x["1"] = "moose"<br/><br/>
+				//print the value of "1" in x again<br/>
+				print(x["1"])<br/><br/>
+			</p>
+			
+			<p>
+				Accessing an array element is doing with the variable name and a pair of square brackets enclosing the key. When referencing an array element you can either use the value from the key, or reassign a new value to that key. The syntax for the actual reference is the same both ways as shown above.<br/><br/>
+				It is also possible to create an array simply by setting an array element on a variable. The variable will be created or converted to an array type behind the scenes and the single key/value will be set. 
+			</p>
+			
+		</div>
+		
+		
+		<!-- Control Flows -->
 		<div class="section" id="controlFlows">
 			<h2>Control Flows.</h2>
 			<p>
@@ -511,6 +669,109 @@
 			</p>
 			
 		</div>
+		
+		
+		<!-- Functions -->
+		<div class="section" id="functions">
+			<h2>Functions.</h2>
+			<p id="calling">
+				Declaring functions allows you to encapsulate functionality that you would otherwise have to continually write out. They are are useful component in simple scripts and can become near essential in complex ones. The functionality of a function in Latria is near identical to those of most other programming languages (minus the initial syntax) and so should be relatively easy to grasp if you're familiar with the concept.
+			</p>
+			
+			<h3>calling.</h3>
+			
+			<p>
+				Some functions have already been provided to you by the system, like <span class="code">print</span>. To call these functions you provide the function name and a parentheses enclosed list of arguments.
+			</p>
+			
+			<p id="declaring" class="code"><br/>
+				print("an argument passed to print")<br/><br/>
+			</p>
+			
+			
+			<h3>declaring.</h3>
+			
+			<p>
+				Declaring functions is fairly straightforward. For a quick and easy function, you could write one as follows.
+			</p>
+			
+			<p class="code"><br/>
+				//a function called 'function'<br/>
+				@function() {<br/>
+				<br/>
+				<span class="tab"></span>print("calling a function!")<br/>
+				<br/>}<br/><br/>
+				//call 'function'<br/>
+				function()<br/><br/>
+			</p>
+			
+			<p>
+				So what exactly does everything above do? Well, let's break apart and see what makes a function in latria.<br/><br/>
+				To start, a function definition always begins with an '@' symbol. This indicates to latria that what follows is a function definition. After this the name of the function follows. A function name can be any number of alpha numeric characters, but must start with an alpha character. A name like 'a123Function' would work, but a name like '123function' would not. After the function name we have the parameter list contained within parentheses. The parameter list can be empty, or filled with a comma separated list of variables. If you noticed the above example has no parameters, so let's see an example with some.
+			</p>
+			
+			<p class="code"><br/>
+				//a function called 'function' that takes variables x,y,z<br/>
+				@function(x,y,z) {<br/>
+				<br/>
+				<span class="tab"></span>print(x+y+z)<br/>
+				<br/>}<br/><br/>
+				//call function with 1,2,3 passed as arguments<br/>
+				function(1,2,3)<br/>
+			</p>
+				
+			<p>
+				Notice that since latria uses inferred types there is no control over what kind of variables you can pass to a function. The above function could take numbers <span style="font-style:italic">or</span> strings, or both! This kind of flexibility can come as a double edged blade, allowing you to stretch the applications of a single function definition or to end up performing string math by accident. Name your functions clearly to guard against such mistakes.<br/><br/> Now finally a function body is contained within a pair of curly braces {}. In the examples here you'll see curly braces on the same line as the function definition. This is optional and you can place them anywhere you want so long as the opening brace precedes the function body and the closing brace follows it. Anything that goes between these braces is run as latria code, including other function definitions! It's important to note that when within a function you are within a scope that only has access to the variables passed to it. A scope in this case is referring to a closure that is defined by the function body. Anything within the closure operates with a set of variables independent of any code preceding or following the function when called. A good example of the separation of variables across scopes is below, where the variable x is declared outside of a function and passed as an argument. Although it is altered inside once the function body is exited the value of x returns to what it was before. This is an example of x being declared in scope a, and <span style="font-style:italic">another</span> x being declared in scope b. They may both be called x, but they are distinctly different variables.
+			</p>
+			
+			<p class="code"><br/>
+				//set x to 2<br/>
+				x=2<br/><br/>
+				//create a function that takes x as a parameter<br/>
+				@f(x) {<br/>
+				<br/><br/>
+				<span class="tab"></span>//increment x by 1<br/>
+				<span class="tab"></span>x=x+1<br/>
+				<br/>
+				<span class="tab"></span>//print x<br/>
+				<span class="tab"></span>print(x)<br/><br/>
+				}<br/><br/>
+				//print x, call our function and then print x again to see it has not changed in this scope<br/>
+				print(x)<br/>
+				f(x)<br/>
+				print(x)<br/><br/>
+			</p>
+			
+			<p>
+				The above will print x 3 times, showing the original, the 'new' x and the original again. Even though the name of the variable 'x' is the same throughout, the scope changes when the function body is entered. Any variables passed or declared inside a function body remain independent from any variables before. This also means that once you exit the function body any variables you declare will 'fall' out of scope, making them no longer accessible. In most cases this is desirable, as it makes latria memory managed. However when you calculate something that you wish to get back from a function you will most likely want to <span id="returning" class="naranja">return</span> a variable.
+			</p>
+			
+			<h3>returning.</h3>
+			
+			<p>
+				Returning a variable from a function is essential if you wish to have access to the result of your function's work. To do this you simply utilize the <span class='code'>return</span> keyword followed by a space and the variable you wish to return.
+			</p>
+			
+			<p class="code"><br/>
+				//declaring a function called 'double' that will double and return our input<br/><br/>
+				@double(x) {<br/>
+				<br/>
+				<span class="tab"></span>x=x*2<br/>
+				<br/>
+				<span class="tab"></span>//returns x<br/><br/>
+				<span class="tab"></span>return x<br/><br/>
+				}<br/><br/>
+				//call double and assign it to var<br/>
+				var = double(5)<br/><br/>
+				print(var) //10<br/><br/>
+			</p>
+			
+			<p>
+				You can return any variable of any type you wish, but you may only return one. If you wish to return one or more you may declare an array inside your function and return that instead.<br/><br/>An additional note, although variables are limited to scope, function definitions are not <span style="font-style:italic">currently</span> held by this same limitation. Functions declared within functions are available globally regardless of how nested they may be. I want to make sure that you as the developer are aware of this in the meantime while it is an outstanding issue.
+			</p>
+			
+		</div>
+		
 		
 		<!-- Random -->
 		<div class="section" id="random">
