@@ -122,7 +122,7 @@
 		<a class="side-nav-item" href="#client">client</a>
 		<a class="side-nav-item" href="#connect">connection</a>
 		<a class="side-nav-item" href="#readDat">Read Data</a>
-		<a class="side-nav-item" href="#writeDat">Write Data</a>
+		<a class="side-nav-item" href="#sendDat">Send Data</a>
 		<a class="side-nav-item" href="#closeConn">Close Connection</a>
 		<hr/>
 		<a class="side-nav-item-title" href="#gc">Garbage Collection</a>
@@ -814,7 +814,6 @@
 			<h2>Server &amp; Client.</h2>
 			<p>
 				In today's world nearly everything is interconnected. In response latria incorporates server and client functionality as a basic need in this day and age. With the built in support for server and client functionality setting up either can be done in as few as a couple lines of code. When a connection is established both parties can either read, write or terminate the connection.<br/><br/>
-				<span style="font-style:italic;font-size:14px">*Server/Client functionality is not currently supported on Windows, but will be soon.</span>
 			</p>
 			
 			<h3 id="server">server.</h3>
@@ -854,7 +853,7 @@
 			
 			<p>
 				As mentioned before a connection is managed via a 'connection' object. A connection object is returned from 'startServer' or 'connect' when a connection is established. When a connection attempted by the 'connect' function fails however, it returns a -1 value, which should be checked before continuing.<br/><br/>
-				A connection is a first class citizen, capable of being passed and returned like any other value. Once a connection has been obtained it can be manipulated by 3 distinct functions: readData, writeData and closeConnection.
+				A connection is a first class citizen, capable of being passed and returned like any other value. Once a connection has been obtained it can be manipulated by 3 distinct functions: readData, sendData and closeConnection.
 			</p>
 			
 			<h3 id="readDat">Read Data.</h3>
@@ -874,17 +873,17 @@
 				print(read)<br/><br/>
 			</p>
 			
-			<h3 id="writeDat">Write Data.</h3>
+			<h3 id="sendDat">Send Data.</h3>
 			
 			<p>
-				Writing data to an established connection is done through the <span class="naranja">writeData</span> function, which takes an established connection and a string value to write as arguments. It returns a number value of the number of bytes written to the output stream. If you write a string such as "meep meep" and 'writeData' returns a value of 0 you can be relatively sure that the other side has disconnected or is otherwise no longer available. Here's an example of writing over an established connection and checking if we sent successfully using an if-else statement.
+				Sending data through an established connection is done through the <span class="naranja">sendData</span> function, which takes an established connection and a string value to send as arguments. It returns a number value of the number of bytes written to the output stream. If you send a string such as "meep meep" and 'sendData' returns a value of 0 you can be relatively sure that the other side has disconnected or is otherwise no longer available. Here's an example of sending over an established connection and checking if we sent successfully using an if-else statement.
 			</p>
 			
 			<p class="code"><br/>
 				//connect to a server on port 5000<br/>
 				x = connect("127.0.0.1", 5000)<br/>
 				<br/>
-				result = writeData(x,"meep meep")<br/>
+				result = sendData(x,"meep meep")<br/>
 				<br/>
 				//check the value to make sure we wrote out successfully<br/>
 				if(result == 0) {<br/>
@@ -901,11 +900,11 @@
 			</p>
 			
 			<p class="code"><br/>
-				//Shows the whole cycle of connecting to a server, writingData, readingData, and closing the connection<br/><br/>
+				//Shows the whole cycle of connecting to a server, sending data, reading data, and closing the connection<br/><br/>
 				//connect to a server on port 5000<br/>
 				x = connect("127.0.0.1", 5000)<br/>
 				<br/>
-				result = writeData(x,"meep meep")<br/>
+				result = sendData(x,"meep meep")<br/>
 				<br/>
 				//check the value to make sure we wrote out successfully<br/>
 				if(result == 0) {<br/>
@@ -1065,7 +1064,7 @@
 	</div>
 
 	<div class='footer-section'>
-		<p style='font-size: 16px; color: #707070'>Guide Revision 2 for Latria v0.1.0</p>
+		<p style='font-size: 16px; color: #707070'>Guide Revision 3 for Latria v0.1.0</p>
 		<p style='font-size: 16px; color: #707070'>Copyright © 2015 Benjamin Wilson Friedman, All rights reserved.</p>
 	</div>
 </div>
