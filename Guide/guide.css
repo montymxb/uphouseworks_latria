@@ -28,7 +28,7 @@ body {
 	color: #0066ff;
 	transition: 0.3s;
 	border: solid 2px #fff;
-	border-style: none none solid none;
+	border-style: solid;
 	font-size: 24px;
 	font-weight: bold;
 	padding: 2px;
@@ -40,7 +40,7 @@ body {
 	color: #0099ff;
 	transition: 0.3s;
 	border: solid 2px #fff;
-	border-style: none none solid none;
+	border-style: solid;
 	font-size: 18px;
 	margin-left: 8px;
 	padding: 2px;
@@ -111,7 +111,9 @@ body {
 	border-radius: 4px;
 	font-size: 15px;
 	padding: 2px;
-	color: #0033ff
+	color: #000;
+	line-height: 150%;
+	font-family: futura
 }
 
 .section .output {
