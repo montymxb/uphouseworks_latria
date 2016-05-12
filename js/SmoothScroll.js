@@ -11,7 +11,10 @@
  * 
  */
 
-function SmoothScroll() {}
+function SmoothScroll() {
+    this.timeouts = [];
+    this.velocity = 0.0;
+}
 
 SmoothScroll.prototype = {
 
@@ -60,7 +63,7 @@ SmoothScroll.prototype = {
 
         if(!scrollRate) {
             // default scroll rate
-            scrollRate = 0.75;
+            scrollRate = 0.7;
         }
 
         // get our current Y
@@ -69,6 +72,17 @@ SmoothScroll.prototype = {
         // get our target element's Y pos
         var stopY       = this._getElementYPos(eID);
 
+        // check to clear existing timeouts
+        if(this.timeouts.length > 0) {
+            // clear all existing timeouts
+            const timeoutLen = this.timeouts.length;
+            for(var x = 0; x < timeoutLen; x++) {
+                clearTimeout(this.timeouts[x]);
+
+            }
+        }
+
+        // set framecounter
         var x = 0;
 
         if(stopY > currentY) {
@@ -79,7 +93,19 @@ SmoothScroll.prototype = {
 
             // loop until we reach our target
             while(currentY < stopY) {
-                setTimeout("document.getElementById('content-window').scrollTo(0, "+currentY+")", x++*frameRate);
+                const _currentY = currentY;
+                const _x = x;
+                const _this = this;
+
+                this.timeouts.push(setTimeout(function() {
+                    // scroll to this point for this frame
+                    document.getElementById("content-window").scrollTo(0, _currentY);
+
+                    // splice out this timeout element
+                    _this.timeouts.splice(_x, 1);
+
+
+                }, x++*frameRate));
 
                 // increment our currentY
                 currentY += Math.pow(stopY - currentY * 1.0, scrollRate);
@@ -93,7 +119,18 @@ SmoothScroll.prototype = {
 
             // loop until we reach our target
             while(currentY > stopY) {
-                setTimeout("document.getElementById('content-window').scrollTo(0, "+currentY+")", x++*frameRate);
+                const _currentY = currentY;
+                const _x = x;
+                const _this = this;
+
+                this.timeouts.push(setTimeout(function() {
+                    // scroll to this point for this frame
+                    document.getElementById("content-window").scrollTo(0, _currentY);
+
+                    // splice out this timeout element
+                    _this.timeouts.splice(_x, 1);
+
+                }, x++*frameRate));
 
                 // decrement our currentY
                 currentY -= Math.pow(currentY - stopY * 1.0, scrollRate);
