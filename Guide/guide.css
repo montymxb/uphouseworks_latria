@@ -23,6 +23,10 @@ body {
 	background: #fff
 }
 
+#side-nav a:hover{
+	cursor: pointer;
+}
+
 .side-nav-item-title {
 	display: block;
 	color: #0066ff;
