@@ -39,22 +39,23 @@
 	}
 	</script>
 	<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-47712445-4', 'auto');
-  ga('send', 'pageview');
-</script>
-	<script src="../js/jquery-1.11.3.min.js"></script>
-	<script src="uphw.js"></script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	  ga('create', 'UA-47712445-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	<script src="../js/SmoothScroll.js"></script>
+	<!--<script src="../js/jquery-1.11.3.min.js"></script>-->
+	<!--<script src="uphw.js"></script>-->
 </head>
 <body>
 
 <!--Left Aligned Nav-->
 <div id="right-nav">
 	<a class="nav-item" href="../" style="text-decoration:none">latria.</a>
-	<a class="nav-item" onclick="$('#gettingStarted').scrollView();"><strong>guide</strong></a>
+	<a class="nav-item" onclick="SmoothScroll.scrollToId('gettingStarted')"><strong>guide</strong></a>
 </div>
 
 <!--spacer-->
@@ -63,87 +64,87 @@
 <div id="window-wrapper-div">
 
 	<div id="side-nav">
-		<a class="side-nav-item-title" href="#gettingStarted">Getting Started</a>
-		<a class="side-nav-item" href="#about">A little history</a>
-		<a class="side-nav-item" href="#gettingLatria">Getting Latria</a>
-		<a class="side-nav-item" href="#buildingSource">Building</a>
-		<a class="side-nav-item" href="#installing">Installing</a>
-		<a class="side-nav-item" href="#firstScript">A Basic Script</a>
-		<a class="side-nav-item" href="#syntax">Basic Syntax</a>
-		<a class="side-nav-item" href="#types">Types</a>
-		<a class="side-nav-item" href="#basicMath">Basic Math</a>
+		<a class="side-nav-item-title" onclick="SmoothScroll.scrollToId('gettingStarted')">Getting Started</a>
+		<a class="side-nav-item" onclick="SmoothScroll.scrollToId('about')">A little history</a>
+		<a class="side-nav-item" onclick="SmoothScroll.scrollToId('gettingLatria')">Getting Latria</a>
+		<a class="side-nav-item" onclick="SmoothScroll.scrollToId('buildingSource')">Building</a>
+		<a class="side-nav-item" onclick="SmoothScroll.scrollToId('installing')">Installing</a>
+		<a class="side-nav-item" onclick="SmoothScroll.scrollToId('firstScript')">A Basic Script</a>
+		<a class="side-nav-item" onclick="SmoothScroll.scrollToId('syntax')">Basic Syntax</a>
+		<a class="side-nav-item" onclick="SmoothScroll.scrollToId('types')">Types</a>
+		<a class="side-nav-item" onclick="SmoothScroll.scrollToId('basicMath')">Basic Math</a>
 		<hr/>
-		<a class="side-nav-item-title" href="#strings">Strings</a>
-		<a class="side-nav-item" href="#find">find</a>
-		<a class="side-nav-item" href="#substr">substring</a>
-		<a class="side-nav-item" href="#replace">replace</a>
-		<a class="side-nav-item" href="#match">match</a>
+		<a class="side-nav-item-title" onclick="SmoothScroll.scrollToId('strings')">Strings</a>
+		<a class="side-nav-item" onclick="SmoothScroll.scrollToId('find')">find</a>
+		<a class="side-nav-item" onclick="SmoothScroll.scrollToId('substr')">substring</a>
+		<a class="side-nav-item" onclick="SmoothScroll.scrollToId('replace')">replace</a>
+		<a class="side-nav-item" onclick="SmoothScroll.scrollToId('match')">match</a>
 		<hr/>
-		<a class="side-nav-item-title" href="#arrays">Arrays</a>
-		<a class="side-nav-item" href="#initializing">initializing an array</a>
-		<a class="side-nav-item" href="#accessing">accessing elements</a>
+		<a class="side-nav-item-title" onclick="SmoothScroll.scrollToId('arrays')">Arrays</a>
+		<a class="side-nav-item" onclick="SmoothScroll.scrollToId('initializing')">initializing an array</a>
+		<a class="side-nav-item" onclick="SmoothScroll.scrollToId('accessing')">accessing elements</a>
 		<hr/>
-		<a class="side-nav-item-title" href="#controlFlows">Control Flows</a>
-		<a class="side-nav-item" href="#if">if</a>
-		<a class="side-nav-item" href="#elseif">elseif</a>
-		<a class="side-nav-item" href="#else">else</a>
-		<a class="side-nav-item" href="#for">for</a>
-		<a class="side-nav-item" href="#while">while</a>
+		<a class="side-nav-item-title" onclick="SmoothScroll.scrollToId('controlFlows')">Control Flows</a>
+		<a class="side-nav-item" onclick="SmoothScroll.scrollToId('if')">if</a>
+		<a class="side-nav-item" onclick="SmoothScroll.scrollToId('elseif')">elseif</a>
+		<a class="side-nav-item" onclick="SmoothScroll.scrollToId('else')">else</a>
+		<a class="side-nav-item" onclick="SmoothScroll.scrollToId('for')">for</a>
+		<a class="side-nav-item" onclick="SmoothScroll.scrollToId('while')">while</a>
 		<hr/>
-		<a class="side-nav-item-title" href="#functions">Functions</a>
-		<a class="side-nav-item" href="#calling">calling</a>
-		<a class="side-nav-item" href="#declaring">declaring</a>
-		<a class="side-nav-item" href="#returning">returning</a>
+		<a class="side-nav-item-title" onclick="SmoothScroll.scrollToId('functions')">Functions</a>
+		<a class="side-nav-item" onclick="SmoothScroll.scrollToId('calling')">calling</a>
+		<a class="side-nav-item" onclick="SmoothScroll.scrollToId('declaring')">declaring</a>
+		<a class="side-nav-item" onclick="SmoothScroll.scrollToId('returning')">returning</a>
 		<hr/>
-		<a class="side-nav-item-title" href="#random">Random</a>
-		<a class="side-nav-item" href="#rand">random</a>
-		<a class="side-nav-item" href="#seed">seed</a>
+		<a class="side-nav-item-title" onclick="SmoothScroll.scrollToId('random')">Random</a>
+		<a class="side-nav-item" onclick="SmoothScroll.scrollToId('rand')">random</a>
+		<a class="side-nav-item" onclick="SmoothScroll.scrollToId('seed')">seed</a>
 		<hr/>
-		<a class="side-nav-item-title" href="#input">Input</a>
+		<a class="side-nav-item-title" onclick="SmoothScroll.scrollToId('input')">Input</a>
 		<hr/>
-		<a class="side-nav-item-title" href="#fileio">File IO</a>
-		<a class="side-nav-item" href="#open">open</a>
-		<a class="side-nav-item" href="#read">read</a>
-		<a class="side-nav-item" href="#write">write</a>
-		<a class="side-nav-item" href="#close">close</a>
-		<a class="side-nav-item" href="#remove">remove</a>
+		<a class="side-nav-item-title" onclick="SmoothScroll.scrollToId('fileio')">File IO</a>
+		<a class="side-nav-item" onclick="SmoothScroll.scrollToId('open')">open</a>
+		<a class="side-nav-item" onclick="SmoothScroll.scrollToId('read')">read</a>
+		<a class="side-nav-item" onclick="SmoothScroll.scrollToId('write')">write</a>
+		<a class="side-nav-item" onclick="SmoothScroll.scrollToId('close')">close</a>
+		<a class="side-nav-item" onclick="SmoothScroll.scrollToId('remove')">remove</a>
 		<hr/>
-		<a class="side-nav-item-title" href="#math">Math Functions</a>
-		<a class="side-nav-item" href="#sqrt">square root</a>
+		<a class="side-nav-item-title" onclick="SmoothScroll.scrollToId('math')">Math Functions</a>
+		<a class="side-nav-item" onclick="SmoothScroll.scrollToId('sqrt')">square root</a>
 		<hr/>
-		<a class="side-nav-item-title" href="#bitwise">Bitwise</a>
-		<a class="side-nav-item" href="#not">not</a>
-		<a class="side-nav-item" href="#or">or</a>
-		<a class="side-nav-item" href="#xor">xor</a>
-		<a class="side-nav-item" href="#and">and</a>
+		<a class="side-nav-item-title" onclick="SmoothScroll.scrollToId('bitwise')">Bitwise</a>
+		<a class="side-nav-item" onclick="SmoothScroll.scrollToId('not')">not</a>
+		<a class="side-nav-item" onclick="SmoothScroll.scrollToId('or')">or</a>
+		<a class="side-nav-item" onclick="SmoothScroll.scrollToId('xor')">xor</a>
+		<a class="side-nav-item" onclick="SmoothScroll.scrollToId('and')">and</a>
 		<hr/>
-		<a class="side-nav-item-title" href="#match_regex">Match Regex</a>
-		<a class="side-nav-item" href="#capture">capture</a>
+		<a class="side-nav-item-title" onclick="SmoothScroll.scrollToId('match_regex')">Match Regex</a>
+		<a class="side-nav-item" onclick="SmoothScroll.scrollToId('capture')">capture</a>
 		<hr/>
-		<a class="side-nav-item-title" href="#xlang">Cross Language Exec</a>
-		<a class="side-nav-item" href="#interpolation">variable interpolation</a>
+		<a class="side-nav-item-title" onclick="SmoothScroll.scrollToId('xlang')">Cross Language Exec</a>
+		<a class="side-nav-item" onclick="SmoothScroll.scrollToId('interpolation')">variable interpolation</a>
 		<hr/>
-		<a class="side-nav-item-title" href="#dynaCode">Dynamic Code</a>
-		<a class="side-nav-item" href="#load">load</a>
-		<a class="side-nav-item" href="#run">run</a>
+		<a class="side-nav-item-title" onclick="SmoothScroll.scrollToId('dynaCode')">Dynamic Code</a>
+		<a class="side-nav-item" onclick="SmoothScroll.scrollToId('load')">load</a>
+		<a class="side-nav-item" onclick="SmoothScroll.scrollToId('run')">run</a>
 		<hr/>
-		<a class="side-nav-item-title" href="#sockets">Server &amp; Client</a>
-		<a class="side-nav-item" href="#server">server</a>
-		<a class="side-nav-item" href="#client">client</a>
-		<a class="side-nav-item" href="#connect">connection</a>
-		<a class="side-nav-item" href="#readDat">Read Data</a>
-		<a class="side-nav-item" href="#sendDat">Send Data</a>
-		<a class="side-nav-item" href="#closeConn">Close Connection</a>
+		<a class="side-nav-item-title" onclick="SmoothScroll.scrollToId('sockets')">Server &amp; Client</a>
+		<a class="side-nav-item" onclick="SmoothScroll.scrollToId('server')">server</a>
+		<a class="side-nav-item" onclick="SmoothScroll.scrollToId('client')">client</a>
+		<a class="side-nav-item" onclick="SmoothScroll.scrollToId('connect')">connection</a>
+		<a class="side-nav-item" onclick="SmoothScroll.scrollToId('readDat')">Read Data</a>
+		<a class="side-nav-item" onclick="SmoothScroll.scrollToId('sendDat')">Send Data</a>
+		<a class="side-nav-item" onclick="SmoothScroll.scrollToId('closeConn')">Close Connection</a>
 		<hr/>
-		<a class="side-nav-item-title" href="#gc">Garbage Collection</a>
-		<a class="side-nav-item" href="#gc-about">About</a>
-		<a class="side-nav-item" href="#gc-rate">Altering the collection rate</a>
+		<a class="side-nav-item-title" onclick="SmoothScroll.scrollToId('gc')">Garbage Collection</a>
+		<a class="side-nav-item" onclick="SmoothScroll.scrollToId('gc-about')">About</a>
+		<a class="side-nav-item" onclick="SmoothScroll.scrollToId('gc-rate')">Altering the collection rate</a>
 		<hr/>
-		<a class="side-nav-item-title" href="#additional">Additional Functions</a>
-		<a class="side-nav-item" href="#sleep">sleep</a>
-		<a class="side-nav-item" href="#time">time</a>
-		<a class="side-nav-item" href="#platform">platform</a>
-		<a class="side-nav-item" href="#purge">purge memory</a>
+		<a class="side-nav-item-title" onclick="SmoothScroll.scrollToId('additional')">Additional Functions</a>
+		<a class="side-nav-item" onclick="SmoothScroll.scrollToId('sleep')">sleep</a>
+		<a class="side-nav-item" onclick="SmoothScroll.scrollToId('time')">time</a>
+		<a class="side-nav-item" onclick="SmoothScroll.scrollToId('platform')">platform</a>
+		<a class="side-nav-item" onclick="SmoothScroll.scrollToId('purge')">purge memory</a>
 		<br/><br/>
 	</div>
 

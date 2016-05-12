@@ -4,4 +4,5 @@ $.fn.scrollView = function () {
 			scrollTop: $(this).offset().top
 		}, 450);
 	});
-}
+};
+
