@@ -19,23 +19,33 @@ function SmoothScroll() {
 SmoothScroll.prototype = {
 
     // gets the current y position
-    _getCurrentYPos: function() {
+    _getCurrentYPos: function(pane) {
+
+        var doc = window;
+
+        // check to use a passed viewing pane
+        if(pane) {
+            return document.getElementById(pane).scrollTop;
+        } else {
+            return window.pageYOffset;
+        }
+
         if (document.pageYOffset) {
             // Firefox, Chrome, Opera, Safari
-            return document.getElementById('content-window').scrollTop;
+            return doc.scrollTop;
 
         } else if (document.documentElement && document.documentElement.scrollTop) {
             // Internet Explorer 6 - standards mode
-            return document.getElementById('content-window').scrollTop;
+            return doc.scrollTop;
 
         } else if (document.body.scrollTop) {
             // Internet Explorer 6, 7 and 8
-            return document.getElementById('content-window').scrollTop;
+            return doc.scrollTop;
 
         }
 
         // default to scrollTop
-        return document.getElementById('content-window').scrollTop;
+        return doc.scrollTop;
     },
 
 
@@ -56,7 +66,7 @@ SmoothScroll.prototype = {
 
 
     // smooth scrolls to an element by id
-    scrollToId: function(eID, scrollRate) {
+    scrollToId: function(eID, scrollRate, scrollPane) {
 
         // frame rate of 16.67 milliseconds
         var frameRate   = 16.6666666667;
@@ -67,7 +77,7 @@ SmoothScroll.prototype = {
         }
 
         // get our current Y
-        var currentY    = this._getCurrentYPos();
+        var currentY    = this._getCurrentYPos(scrollPane);
 
         // get our target element's Y pos
         var stopY       = this._getElementYPos(eID);
@@ -99,7 +109,11 @@ SmoothScroll.prototype = {
 
                 this.timeouts.push(setTimeout(function() {
                     // scroll to this point for this frame
-                    document.getElementById("content-window").scrollTo(0, _currentY);
+                    if(scrollPane) {
+                        document.getElementById(scrollPane).scrollTo(0, _currentY);
+                    } else {
+                        window.scrollTo(0, _currentY);
+                    }
 
                     // splice out this timeout element
                     _this.timeouts.splice(_x, 1);
@@ -125,7 +139,11 @@ SmoothScroll.prototype = {
 
                 this.timeouts.push(setTimeout(function() {
                     // scroll to this point for this frame
-                    document.getElementById("content-window").scrollTo(0, _currentY);
+                    if(scrollPane) {
+                        document.getElementById(scrollPane).scrollTo(0, _currentY);
+                    } else {
+                        window.scrollTo(0, _currentY);
+                    }
 
                     // splice out this timeout element
                     _this.timeouts.splice(_x, 1);
