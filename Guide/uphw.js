@@ -1,6 +1,3 @@
-
-
-
 $.fn.scrollView = function () {
 	return this.each(function () {
 		$('html, body, #content-window').animate({
